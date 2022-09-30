@@ -1,0 +1,94 @@
+.user-page-navbar1{
+    width: 100% !important;
+   height: 70px;
+   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.nav-search-input-div{
+    display: flex;
+    margin-top: -50px;
+    margin-left: 400px;
+}
+.nav-search-input{
+    width: 40% !important;
+}
+.general-navbar2-div{
+    width: 100% !important;
+    height: 70px;
+    background-color: #31D2F2;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.fa-soli{
+        width: 35px;
+        fill: black !important;
+        margin-left: 100px;
+        cursor: pointer;
+}
+.fa-solids{
+        width: 40px;
+        fill: white !important;
+        margin-left: 450px;
+        cursor: pointer;
+        margin-top: -60px;
+}
+.account{
+    margin-top: -55px;
+    margin-left: 750px;
+    display: flex;
+}
+.fa-solidss{
+        width: 35px;
+        fill: black !important;
+        margin-left: 1100px;
+        cursor: pointer;
+        margin-top: -60px;
+}
+.help{
+    display: flex !important;
+}
+@media only screen and (max-width: 1000px) {
+    .user-page-navbar1{
+        width: 100% !important;
+       height: 70px;
+       box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+    }
+    .nav-search-input-div{
+        display: flex;
+        margin-top: -50px;
+        margin-left: 100px;
+    }
+    .help{
+        /* display: none !important; */
+    }
+    .nav-search-input{
+        display: none !important;
+    }
+    .bbb{
+        display: none !important;
+    }
+    .vmart-class-logo2{
+       margin-left: -200px !important;
+    }
+    .fa-soli{
+        width: 35px;
+        fill: black !important;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .fa-solids{
+        width: 40px;
+        fill: white !important;
+        margin-left: 140px;
+        cursor: pointer;
+        margin-top: -60px;
+    }
+    .account{
+        display: none;
+    }
+    .fa-solidss{
+        width: 35px;
+        fill: black !important;
+        margin-left: 260px;
+        cursor: pointer;
+        margin-top: -100px;
+    }
+}

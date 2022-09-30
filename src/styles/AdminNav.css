@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+.fa-solid{
+    width: 30px;
+    fill: white !important;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.vmart-class-logo{
+    font-family: 'Caveat', cursive;
+}
+.admin-nav-nav1{
+   width: 100% !important;
+   height: 60px;
+   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.admin-nav-nav2{
+    width: 100% !important;
+    height: 60px;
+    background-color: #31D2F2;
+}
+.admin-text-admin-nav{
+    margin-left: 450px;
+    margin-top:-30px;
+}
+.link-category-admin-dash{
+    text-decoration: none;
+    color: black !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .admin-nav-nav1{
+        width: 100% !important;
+        height: 60px;
+        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+     }
+     .admin-nav-nav2{
+        width: 100% !important;
+        height: 60px;
+        background-color: #31D2F2;
+    }
+    .fa-solid{
+        width: 30px;
+        fill: white !important;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .admin-text-admin-nav{
+        margin-left: 80px;
+        margin-top:-30px;
+    }
+}
