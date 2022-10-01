@@ -8,7 +8,7 @@ const UserNavBar = () => {
   return (
     <>
      <nav className='user-page-navbar1'>
-     <h3 className='vmart-class-logo ms-5 ps-3 pt-3 vmart-class-logo2'>Vmart<img src={icon1} alt="" className='admin-logo-img' width={50}/></h3>
+     <h3 className='vmart-class-logo pt-3 vmart-class-logo2'>Vmart<img src={icon1} alt="" className='admin-logo-img' width={50}/></h3>
      <div className='nav-search-input-div'>
         <input type="text" className='form-control nav-search-input' placeholder='Search products,brand etc'/>
         <button className='btn btn-info ms-2 bbb'>Search</button>
