@@ -77,6 +77,9 @@
     margin-left: 1100px;
     width: 15% !important;
 }
+.bbb{
+    width: 10% !important;    
+}
 @media only screen and (max-width: 1000px) {
     .user-page-navbar1{
         width: 100% !important;
@@ -89,10 +92,10 @@
         margin-left: 100px;
     }
     .nav-search-input{
-        display: none !important;
+       margin-left: 45px;
     }
     .bbb{
-        display: none !important;
+        width: 25% !important;
     }
     .fa-soli{
         width: 35px;
@@ -130,5 +133,8 @@
     }
     .vmart-class-logo2{
         margin-left: 10px;
+    }
+    .help{
+        display: none !important;
     }
 }
