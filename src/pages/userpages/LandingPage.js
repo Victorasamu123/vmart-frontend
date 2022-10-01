@@ -13,7 +13,7 @@ const LandingPage = () => {
      <div></div>
      <div></div>
      <center>
-     <div className="second-half w-50">
+     <div className="second-half">
             <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

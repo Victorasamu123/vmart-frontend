@@ -45,6 +45,16 @@
 .help{
     display: flex !important;
 }
+.link-home-landing{
+    width: fit-content !important;
+    height: fit-content !important;
+    background-color: brown;
+}
+.link-home-landing-div{
+    width: fit-content !important;
+    height: fit-content !important;
+    background-color: green;
+}
 @media only screen and (max-width: 1000px) {
     .user-page-navbar1{
         width: 100% !important;
