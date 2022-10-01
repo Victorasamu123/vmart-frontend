@@ -55,6 +55,20 @@
     height: fit-content !important;
     background-color: green;
 }
+.offcanvas-start{
+    transition: 0.5s !important;
+}
+.signup-btn-landing{
+    margin-top:-60px;
+    margin-left: 300px;
+    width: 15% !important;
+    display: inline;
+}
+.signin-btn-landing{
+    margin-top:-110px;
+    margin-left: 1100px;
+    width: 15% !important;
+}
 @media only screen and (max-width: 1000px) {
     .user-page-navbar1{
         width: 100% !important;
@@ -97,5 +111,16 @@
         margin-left: 260px;
         cursor: pointer;
         margin-top: -100px;
+    }
+    .signup-btn-landing{
+        margin-top:-110px;
+        margin-left: 210px;
+        width: 25% !important;
+    }
+    .signin-btn-landing{
+        display: none !important;
+    }
+    .offcanvas-start{
+        transition: 0.5s !important;
     }
 }
