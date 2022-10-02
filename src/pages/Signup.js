@@ -1,4 +1,5 @@
 import React ,{useState}from 'react'
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import "../styles/Signup.css"
 const Signup = () => {
@@ -10,6 +11,7 @@ const Signup = () => {
   const [lastnameerror, setlastnameerror] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
+  const endpoints = "http://localhost:4000/auth/signup"
   const signup=()=>{
     let regexForFirstName=/^[\w]{3,}$/
     let regexForLastName=/^[\w]{3,}$/
@@ -51,8 +53,9 @@ const Signup = () => {
       setlastnameerror("")
       setemailerror("")
       setpassworderror("")
-      // let signUpObj={firstname,lastname,email,password,status:false}
-      // axios.post(endPoints,signUpObj).then((result)=>{
+      let signUpObj={firstname,lastname,email,password,status:false}
+      axios.post(endpoints,signUpObj)
+      // .then((result)=>{
       //   console.log(result)
       // }).catch((err)=>{
       //   console.log(err)
