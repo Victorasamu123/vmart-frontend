@@ -1,5 +1,6 @@
 .second-half{
     width: 50% !important;
+    margin-left: 650px;
 }
 
 
@@ -8,5 +9,6 @@
 @media only screen and (max-width: 1000px) {
   .second-half{
     width: 100% !important;
+    margin-left: 0 !important;
   }
 }
