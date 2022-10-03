@@ -7,6 +7,7 @@ const Signup = () => {
   const [lastname, setlastname] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [profilepicture, setprofilepicture] = useState("");
   const [firstnameerror, setfirstnameerror] = useState("");
   const [lastnameerror, setlastnameerror] = useState("");
   const [emailerror, setemailerror] = useState("");
@@ -57,7 +58,7 @@ const Signup = () => {
       setpassworderror("")
       setmessage('')
       setloading(true);
-      let signUpObj={firstname,lastname,email,password,status:false}
+      let signUpObj={firstname,lastname,email,password,profilepicture,status:false}
       axios.post(endpoints,signUpObj).then((result)=>{
         console.log(result)
         setloading(false);
