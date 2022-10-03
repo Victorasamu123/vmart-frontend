@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import axios from "axios" 
 import "../styles/Signup.css"
 const Signin = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
+  const [message, setmessage] = useState("");
+  const [loading, setloading] = useState(false);
   const [user_id, setuser_id] = useState("");
+  const endpointsignin = "http://localhost:4000/auth/signin"
   const signin=()=>{
     let regexForEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
     let regexForPassword=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
@@ -30,7 +34,16 @@ const Signin = () => {
     else{
       setemailerror("")
       setpassworderror("")
-      alert("correct login")
+      setmessage('')
+      setloading(true);
+      let signIpObj={email,password}
+      axios.post(endpointsignin,signIpObj).then((result)=>{
+        console.log(result)
+        setloading(false);
+        setmessage(result.data.message);
+      }).catch((err)=>{
+        console.log(err)
+      });
   }
   }
   return (
@@ -43,6 +56,20 @@ const Signin = () => {
             <div className='text-danger'>{emailerror}</div>
             <input type="password" placeholder='password'className='form-control mb-4 w-75' onChange={(e)=>setpassword(e.target.value)} value={password}/>
             <div className='text-danger'>{passworderror}</div>
+            {loading ? (
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+            {message !== "" ? (
+              <div className="alert alert-danger">{message}</div>
+            ) : (
+              ""
+            )}
             <button className='btn btn-info w-75' onClick={signin}>Signin</button>
           </div>
           <div className='first-signup-div'>

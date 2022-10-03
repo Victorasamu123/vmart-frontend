@@ -11,6 +11,8 @@ const Signup = () => {
   const [lastnameerror, setlastnameerror] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
+  const [message, setmessage] = useState("");
+  const [loading, setloading] = useState(false);
   const endpoints = "http://localhost:4000/auth/signup"
   const signup=()=>{
     let regexForFirstName=/^[\w]{3,}$/
@@ -53,14 +55,16 @@ const Signup = () => {
       setlastnameerror("")
       setemailerror("")
       setpassworderror("")
+      setmessage('')
+      setloading(true);
       let signUpObj={firstname,lastname,email,password,status:false}
-      axios.post(endpoints,signUpObj)
-      // .then((result)=>{
-      //   console.log(result)
-      // }).catch((err)=>{
-      //   console.log(err)
-      // });
-      alert("correct login")
+      axios.post(endpoints,signUpObj).then((result)=>{
+        console.log(result)
+        setloading(false);
+          setmessage(result.data.message);
+      }).catch((err)=>{
+        console.log(err)
+      });
   }
   }
   return (
@@ -82,6 +86,20 @@ const Signup = () => {
             <div className='text-danger'>{emailerror}</div>
             <input type="password" placeholder='password'className='form-control mb-4 w-75' onChange={(e)=>setpassword(e.target.value)} value={password}/>
             <div className='text-danger'>{passworderror}</div>
+            {loading ? (
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only"></span>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+            {message !== "" ? (
+              <div className="alert alert-danger">{message}</div>
+            ) : (
+              ""
+            )}
             <button className='btn btn-info w-75' onClick={signup}>Signup</button>
           </div>
         </div>
