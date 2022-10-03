@@ -8,7 +8,7 @@
 }
 .first-signup-div{
     width: 40% !important;
-    background-color: #31D2F2;
+    background-color: rgb(251,87,3);
 }
 .second-signup-div{
     width: 60% !important;
@@ -46,7 +46,7 @@ input{
     }
     .first-signup-div{
         width: 45% !important;
-        background-color: #31D2F2;
+        background-color: rgb(251,87,3);
     }
     .second-signup-div{
         width: 55% !important;

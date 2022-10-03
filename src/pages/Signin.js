@@ -70,7 +70,7 @@ const Signin = () => {
             ) : (
               ""
             )}
-            <button className='btn btn-info w-75' onClick={signin}>Signin</button>
+            <button className='btn btn-info w-75' onClick={signin} style={{backgroundColor:"rgb(251,87,3)"}}>Signin</button>
           </div>
           <div className='first-signup-div'>
            <h3 className='signup-text-vmart'>Welcome to Vmart</h3>

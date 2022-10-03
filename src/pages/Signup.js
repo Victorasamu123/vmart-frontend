@@ -101,7 +101,7 @@ const Signup = () => {
             ) : (
               ""
             )}
-            <button className='btn btn-info w-75' onClick={signup}>Signup</button>
+            <button className='btn btn-info w-75' onClick={signup} style={{backgroundColor:"rgb(251,87,3)"}}>Signup</button>
           </div>
         </div>
      </center>
