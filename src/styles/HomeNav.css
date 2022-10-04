@@ -1,0 +1,25 @@
+.general-div-home-nav{
+    width: 100% !important;
+    height: 70px;
+    background-color: rgb(251,87,3);
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+#sideNavBar{ 
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.side-nav-btn{
+
+}
+@media only screen and (max-width: 1000px) {
+  
+}
