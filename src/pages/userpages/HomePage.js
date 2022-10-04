@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer';
 import HomeNav from '../../components/HomeNav';
 import UserNavBar from '../../components/UserNavBar';
 
@@ -7,6 +8,7 @@ const HomePage = () => {
     <>
       <UserNavBar/>
       <HomeNav/>
+      <Footer/>
     </>
   )
 }
