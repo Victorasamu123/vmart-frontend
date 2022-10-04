@@ -18,8 +18,21 @@
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
 }
 .side-nav-btn{
-
+  margin-top: 15px;
+  margin-left: 50px;
+}
+.side-nav-btn-close{
+  margin-left: 50% !important;
+  margin-top: 30px;
+}
+li{
+  list-style: none;
+}
+.link-sidenav-li{
+  text-decoration: none;
+  color: rgb(251,87,3);
+  font-size: 20px;
 }
 @media only screen and (max-width: 1000px) {
-  
+
 }
