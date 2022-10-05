@@ -10,7 +10,7 @@ const UserNavBar2 = () => {
     <>
       <div className='general-navbar2-div'>
       <img src={icon6} data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" className="fa-soli mt-4" alt="" />
-     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
      <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="staticBackdropLabel">Select category</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -4,10 +4,32 @@
     background-color: rgb(251,87,3);
     margin-left: 70px;
 }
-
-
-
-
+.userhome-page-h4-first{
+    font-size: 25px;
+    margin-left: 70px;
+}
+.userhome-page-h4-second{
+    color: white !important;
+  font-size: 60px;
+  font-weight: bolder;
+  margin-left: 130px;
+  margin-top: -20px;
+}
+.userhome-page-h4-third{
+    color:black !important;
+  font-size: 70px;
+  font-weight: bolder;
+  margin-left: 50px;
+  margin-top: -35px;
+}
+.userhome-page-h4-fourth{
+    color: black !important;
+  font-size: 25px;
+  margin-left: 70px;
+}
+.homepage-carousel-div{
+    width: 50% !important;
+}
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
         width: 100% !important;
@@ -15,4 +37,30 @@
         background-color: rgb(251,87,3);
         margin-left: 0px;
     }
+    .userhome-page-h4-first{
+    font-size: 15px;
+    margin-left: 30px;
+   }
+   .userhome-page-h4-second{
+    color: white !important;
+    font-size: 60px;
+    font-weight: bolder;
+    margin-left: 50px;
+    margin-top: -20px;
+  }
+  .userhome-page-h4-third{
+    color:black !important;
+    font-size: 70px;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: -35px;
+  }
+  .userhome-page-h4-fourth{
+    color: black !important;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+  .homepage-carousel-div{
+    width: 80% !important;
+  }
 }

@@ -18,7 +18,7 @@ const LandingPage = () => {
      <UserNavBar2/>
      <div className='landing-page-first-div mt-2 pb-4'>
        <div className='w-100 row'>
-        <div className='col-lg-6 col-md-2 col-sm-12'>
+        <div className='col-lg-6 col-md-12 col-sm-12'>
           <h4 className='landing-page-h4-first mt-2'>We introduce to you Vmart as</h4>
           <h4 className='landing-page-h4-second'>AFRICA'S</h4>
           <h4 className='landing-page-h4-third'>Largest</h4>
