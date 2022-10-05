@@ -37,22 +37,19 @@ const UserHomePage = () => {
                   <div className="carousel-item active" data-bs-interval="10000">
                     <img src={img9} className="d-block w-100" alt="..."/>
                     <div className="carousel-caption d-none d-md-block">
-                      <h5>Samsung Galaxy s22 Ultra</h5>
-                      <p>Now available at any vmart mall across Nigeria with 20% discount</p>
+                      
                     </div>
                   </div>
                   <div className="carousel-item" data-bs-interval="2000">
                     <img src={img10} className="d-block w-100" alt="..."/>
                     <div className="carousel-caption d-none d-md-block text-white" id="Thermocool">
-                      <h5>Thermocool Showroom</h5>
-                      <p>Now Available in every vmart stores</p>
+                      
                     </div>
                   </div>
                   <div className="carousel-item">
                     <img src={img11} className="d-block w-100" alt="..."/>
                     <div className="carousel-caption d-none d-md-block  text-white">
-                      <h5>Checkout Our Best Female Designer Dress</h5>
-                      <p>Get Free Female Designer Dress for Every customer</p>
+                      
                     </div>
                   </div>
                 </div>
