@@ -9,6 +9,7 @@ import img4 from "../../images/378x252_copy_17.jpg"
 import img5 from "../../images/Tripple_banner.jpg"
 import img6 from "../../images/get_it_on_google_image.svg"
 import img7 from "../../images/download_on_app_store_image.svg"
+import img8 from "../../images/202103050842528033.jpg"
 import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
@@ -27,7 +28,9 @@ const LandingPage = () => {
             <Link to="/signin"><img src={img7} alt="" width={130} /></Link>
           </div>
         </div>
-        <div className='col-lg-6 col-md-2 col-sm-12'>nnnn</div>
+        <div className='col-lg-6 col-md-2 col-sm-12'>
+          <img src={img8} alt="" className='img-holder-landing-page-div'/>
+        </div>
        </div>
        <div className='col-12 second-sec-in-first-sections mt-3'>
         <center>

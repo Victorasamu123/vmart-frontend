@@ -1,9 +1,11 @@
 import React from 'react'
-
+import "../../styles/UserHomePage.css"
 const UserHomePage = () => {
   return (
     <>
-     <h1>hello user mi</h1>
+     <div className='user-home-page-first-div mt-2'>
+        nn
+     </div>
     </>
   )
 }

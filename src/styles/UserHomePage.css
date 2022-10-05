@@ -1,0 +1,18 @@
+.user-home-page-first-div{
+    width: 90% !important;
+    height: fit-content !important;
+    background-color: rgb(251,87,3);
+    margin-left: 70px;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .user-home-page-first-div{
+        width: 100% !important;
+        height: fit-content !important;
+        background-color: rgb(251,87,3);
+        margin-left: 0px;
+    }
+}
