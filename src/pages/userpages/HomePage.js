@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
       <UserNavBar/>
-      <HomeNav/>
+      <HomeNav />
       <Routes>
         <Route path='/' element={<UserHomePage/>}/>
       </Routes>
