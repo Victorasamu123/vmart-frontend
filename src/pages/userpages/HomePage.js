@@ -5,6 +5,7 @@ import HomeNav from '../../components/HomeNav';
 import UserNavBar from '../../components/UserNavBar';
 import UserHomePage from './UserHomePage';
 const HomePage = () => {
+  let token = localStorage.token
   return (
     <>
       <UserNavBar/>

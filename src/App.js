@@ -8,7 +8,7 @@ import AdminDashboard from './pages/adminPages/AdminDashboard';
 import LandingPage from './pages/userpages/LandingPage';
 import HomePage from './pages/userpages/HomePage';
 function App() {
-  let token = localStorage.token
+  const token = localStorage.token
   return (
     <>
       <Routes>

@@ -42,13 +42,11 @@ const Signin = () => {
         console.log(result)
         setloading(false);
         setmessage(result.data.message);
+        localStorage.token = result.data.token
         if(result.data.status===true){
           if(result.data.userStatus===true){
-            localStorage.token = result.data.token
             navigate("/admindashboard")
           }else{
-            localStorage.token = result.data.token
-            // console.log('token saved!!!')
             navigate("/homepage")
           }
         }else{
