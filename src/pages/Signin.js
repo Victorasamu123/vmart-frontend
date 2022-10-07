@@ -42,12 +42,16 @@ const Signin = () => {
         console.log(result)
         setloading(false);
         setmessage(result.data.message);
+        console.log(result.data.userId)
+        setuser_id(result.data.userId)
+        console.log(message);
         localStorage.token = result.data.token
         if(result.data.status===true){
           if(result.data.userStatus===true){
             navigate("/admindashboard")
           }else{
-            navigate("/homepage")
+            console.log(user_id)
+            navigate("/homepage" , { state: { user_id:result.data.userId}})
           }
         }else{
           console.log("resignin")
