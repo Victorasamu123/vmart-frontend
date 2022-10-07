@@ -8,7 +8,7 @@ const PhonesAdmin = () => {
   const [productdescription, setproductdescription] = useState("")
   const [productprice, setproductprice] = useState("")
   const [productdiscount, setproductdiscount] = useState("")
-
+  const endpoints="http://localhost:4000/addproducts/addphones"
   const filechange=(e)=>{
     let myImage = e.target.files[0]
     let reader = new FileReader()
@@ -18,7 +18,11 @@ const PhonesAdmin = () => {
     }
   }
   const addproduct=()=>{
-    axios
+    let phoneObj={productimage,productname,productcategory,productdescription,productprice,productdiscount}
+    axios.post(endpoints,phoneObj).then((result)=>{
+      console.log(result)
+      alert(result.data.message)
+    })
   }
   return (
     <>
