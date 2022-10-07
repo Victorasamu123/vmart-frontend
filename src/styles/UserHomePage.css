@@ -30,12 +30,29 @@
 .homepage-carousel-div{
     width: 50% !important;
 }
+.user-home-page-second-div{
+  width: 90% !important;
+  height: fit-content !important;
+  background-color: white;
+  margin-left: 70px;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.phones-img{
+  
+}
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
         width: 100% !important;
         height: fit-content !important;
         background-color: rgb(251,87,3);
         margin-left: 0px;
+    }
+    .user-home-page-second-div{
+      width: 100% !important;
+        height: fit-content !important;
+        background-color: white;
+        margin-left: 0px;
+        box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
     }
     .userhome-page-h4-first{
     font-size: 15px;

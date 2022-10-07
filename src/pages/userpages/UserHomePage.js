@@ -9,25 +9,47 @@ import { useLocation } from 'react-router-dom'
 const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
-  const [user_id, setuser_id] = useState("");
+  const [phoneArrays, setphoneArrays]= useState([]);
+  // const [user_id, setuser_id] = useState("");
   const location=useLocation()
   const endpoints = "http://localhost:4000/auth/dashboard"
+  const getphonesendpoints= "http://localhost:4000/addproducts/getphones"
+  let user_id=location.state.user_id
   useEffect(() => {
+    getdashboard()
+    getPhones()
+  }, [])
+
+  const getdashboard=()=>{
     setmessage("");
     setloading(true);
-    console.log(location.state.user_id);
-    setuser_id(location.state.user_id);
+    // setuser_id(location.state.user_id);
+    console.log(user_id);
     let getDashboard={user_id}
     axios.post(endpoints,getDashboard).then((result)=>{
       setloading(false);
       setmessage(result.data.message);
+      console.log(result)
     })
-  }, [])
-  
+  }
+  const getPhones=()=>{
+    setloading(true);
+    axios.get(getphonesendpoints).then((result)=>{
+      setloading(false);
+      console.log(result);
+      setphoneArrays(result.data.phonearray.slice(10))
+    })
+  }
   return (
     <>
-    
-     <div className='user-home-page-first-div mt-2 pb-2'>
+    {message==""?<div class="d-flex justify-content-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+          :
+          <div>
+          <div className='user-home-page-first-div mt-2 pb-2'>
         <div className='w-100 row'>
           <div className='col-lg-6 col-md-12 col-sm-12'>
           <h4 className='userhome-page-h4-first mt-2'>We at vmart gives you</h4>
@@ -40,6 +62,27 @@ const UserHomePage = () => {
         </div>
         </div>
      </div>
+     <div className='user-home-page-second-div mt-2 pb-2'>
+     <div className='w-100 row'>
+      <h4 className='ms-3 col-lg-12 col-md-12 col-sm-12'>Top selling Phone Product</h4>
+       {loading==true?<div class="d-flex justify-content-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only"></span>
+            </div>
+          </div>:
+          <div className='row w-100'>
+            {phoneArrays.map((phones,index)=>(
+              <div className='col-lg-2 col-md-6 col-sm-6'>
+                <img src={phones.productimage} alt="" className='phones-img'/>
+              </div>
+            ))}
+          </div>
+       }
+    </div>
+     </div>
+     </div>
+    }
+     
     </>
   )
 }
