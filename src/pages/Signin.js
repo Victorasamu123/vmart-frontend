@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import axios from "axios" 
 import "../styles/Signup.css"
 const Signin = () => {
@@ -11,6 +11,7 @@ const Signin = () => {
   const [loading, setloading] = useState(false);
   const [user_id, setuser_id] = useState("");
   const endpointsignin = "http://localhost:4000/auth/signin"
+  const navigate=useNavigate()
   const signin=()=>{
     let regexForEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
     let regexForPassword=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
@@ -41,6 +42,18 @@ const Signin = () => {
         console.log(result)
         setloading(false);
         setmessage(result.data.message);
+        if(result.data.status===true){
+          if(result.data.userStatus===true){
+            localStorage.token = result.data.token
+            navigate("/admindashboard")
+          }else{
+            localStorage.token = result.data.token
+            // console.log('token saved!!!')
+            navigate("/homepage")
+          }
+        }else{
+          console.log("resignin")
+        }
       }).catch((err)=>{
         console.log(err)
       });

@@ -1,6 +1,6 @@
 import React ,{useState}from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import "../styles/Signup.css"
 const Signup = () => {
   const [firstname, setfirstname] = useState("");
@@ -15,6 +15,7 @@ const Signup = () => {
   const [message, setmessage] = useState("");
   const [loading, setloading] = useState(false);
   const endpoints = "http://localhost:4000/auth/signup"
+  const navigate=useNavigate()
   const signup=()=>{
     let regexForFirstName=/^[\w]{3,}$/
     let regexForLastName=/^[\w]{3,}$/
@@ -63,6 +64,11 @@ const Signup = () => {
         console.log(result)
         setloading(false);
           setmessage(result.data.message);
+          if(result.data.status===false){
+            console.log("resignup")
+          }else{
+            navigate("/signin")
+          }
       }).catch((err)=>{
         console.log(err)
       });

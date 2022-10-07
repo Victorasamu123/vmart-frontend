@@ -13,7 +13,7 @@ const HomeNav = () => {
   return (
     <>
       <div className='general-div-home-nav'>
-        <div onClick={tryMe} className="side-nav-btn"><img src={icon6} alt="" /></div>
+        <div onClick={tryMe} className="side-nav-btn"><i class="fa-solid fa-bars"></i></div>
         <div id='sideNavBar'>
           <div onClick={close} className="side-nav-btn-close">&times;</div>
           <h3 className='vmart-class-logo pt-3 vmart-class-logo2'>Vmart<img src={icon1} alt="" className='admin-logo-img' width={50}/></h3>
