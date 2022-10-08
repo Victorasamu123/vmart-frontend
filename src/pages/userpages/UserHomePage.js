@@ -78,14 +78,19 @@ const UserHomePage = () => {
                   <div className='phones-img'>
                 <img src={phones.productimage} alt="" className='phones-img1'/>
                   </div>
+                  <div className='phone-name'>
                 <div>{phones.productname}</div>
+                  </div>
                 <div className='phone-price'>₦{phones.productprice}</div>
                 <div className='phones-discount mb-2'>-{phones.productdiscount}</div>
                 </center>
               </Link>
-              <button className='btn mb-3' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
+              <center>
+              <button className='btn mb-3 add-to-cart' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
+              </center>
               </div>
             ))}
+            <Link to="/phonecatpage">see more phone product</Link>
           </div>
        }
     </div>

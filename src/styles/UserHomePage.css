@@ -62,9 +62,18 @@
   height: fit-content !important;
   background-color: #F8D7DA;
   color: rgb(251,87,3);
+  position: relative;
+  top: -320px;
+  left: 60px;
 }
 .phones-img{
   height: 230px;
+}
+.phone-name{
+  height: 50px;
+}
+.add-to-cart{
+  margin-top: -50px;
 }
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
@@ -122,5 +131,20 @@
   .phone-price{
     font-size: 15px;
     margin-top: 10px;
+  }
+  .phone-name{
+    height: 70px;
+  }
+  .phones-discount{
+    width: 30px !important;
+    height: fit-content !important;
+    background-color: #F8D7DA;
+    color: rgb(251,87,3);
+    position: relative;
+    top: -230px;
+    left: 30px;
+  }
+  .add-to-cart{
+    margin-top: -50px;
   }
 }
