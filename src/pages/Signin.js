@@ -48,6 +48,7 @@ const Signin = () => {
         localStorage.token = result.data.token
         if(result.data.status===true){
           if(result.data.userStatus===true){
+            console.log(user_id)
             navigate("/admindashboard")
           }else{
             console.log(user_id)

@@ -38,6 +38,31 @@
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
   /* background-color: black; */
 }
+.phone-display-div{
+  width:15% !important;
+  height: fit-content !important;
+}
+.phone-display-div:hover{
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.link-phone-details{
+  text-decoration: none;
+  color: black;
+}
+.link-phone-details:hover{
+  text-decoration: none;
+  color: black;
+}
+.phone-price{
+  font-size: 25px;
+  margin-top: 20px;
+}
+.phones-discount{
+  width: 30px !important;
+  height: fit-content !important;
+  background-color: #F8D7DA;
+  color: rgb(251,87,3);
+}
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
         width: 100% !important;
@@ -77,5 +102,19 @@
   }
   .homepage-carousel-div{
     width: 80% !important;
+  }
+  .phone-display-div{
+    width:40% !important;
+    height:fit-content !important;
+  }
+  .phone-display-div:hover{
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+  }
+  .phones-img{
+    width: 100px;
+  }
+  .phone-price{
+    font-size: 15px;
+    margin-top: 10px;
   }
 }
