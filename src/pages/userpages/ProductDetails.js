@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
-
+import "../../styles/ProductDetails.css"
 const ProductDetails = () => {
     const location = useLocation()
     const [loading, setloading] = useState(false);
@@ -43,8 +43,22 @@ const ProductDetails = () => {
               <span class="sr-only"></span>
             </div>
           </div>
-          :<div>
-            
+          :<div className='general-div-product-details-page'>
+            <div className='w-100 row'>
+            <div className='col-lg-6 col-md-12 col-sm-12'>
+              <div className='fw-bold fs-2'>{productname}</div>
+              <img src={productimage} alt="" className='small-img-product-details'/>
+              <img src={productimage} alt="" className='big-img-product-details'/>
+            </div>
+            <div className='col-lg-6 col-md-12 col-sm-12'>
+            <div className='fs-2 productname'>{productname}</div>
+            <div className='productprice'>₦{productprice}</div>
+            <div className='fs-2'>Category: {productcategory}</div>
+            <div className='fs-5'>Unit-price: <span className='productprice'>₦{productprice}</span></div>
+            <div className='fs-4'>{productdescription}</div>
+            <button className='btn mt-4 w-75 text-light fs-4' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
+            </div>
+            </div>
           </div>}
     </>
   )

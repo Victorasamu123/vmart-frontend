@@ -5,16 +5,17 @@ import img9 from "../../images/378x252_copy_17.jpg"
 import img10 from "../../images/Tripple_banner.jpg"
 import img11 from "../../images/Triple-Banner-_-378x252.jpg"
 import axios from 'axios'
-import { Link, useLocation } from 'react-router-dom'
+import { Link,useLocation,useNavigate } from 'react-router-dom'
 const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
   const [phoneArrays, setphoneArrays]= useState([]);
+  const navigate=useNavigate()
   // const [user_id, setuser_id] = useState("");
   const location=useLocation()
   const endpoints = "http://localhost:4000/auth/dashboard"
   const getphonesendpoints= "http://localhost:4000/addproducts/getphones"
-  let user_id=location.state.user_id
+  const user_id=localStorage.userId
   useEffect(() => {
     getdashboard()
     getPhones()
@@ -39,6 +40,16 @@ const UserHomePage = () => {
       console.log(result);
       setphoneArrays(result.data.phonearray.slice(10))
     })
+  }
+  const goToDetails=(index)=>{
+    let filteredArray = phoneArrays.filter((item, ind) => index == ind);
+    let itemcategory=filteredArray[0].productcategory
+    let item_id=filteredArray[0]._id
+    console.log(itemcategory,item_id)
+    navigate(`/homepage/${item_id}` , {state:{item_id:item_id,itemcategory:itemcategory}})
+  }
+  const move=()=>{
+    navigate("/signin")
   }
   return (
     <>
@@ -72,8 +83,9 @@ const UserHomePage = () => {
           </div>:
           <div className='row w-100 ms-2'>
             {phoneArrays.map((phones,index)=>(
-              <div className='col-lg-2 col-md-6 col-sm-6 phone-display-div ms-3 mb-2' key={phones._id} p>
-                 <Link className='link-phone-details' to={phones._id}  state={{item_id:phones._id,itemcategory:phones.productcategory}}>
+              <div className='col-lg-2 col-md-6 col-sm-6 phone-display-div ms-3 mb-2' key={phones._id}>
+                <div onClick={()=>goToDetails(index)}>
+                 <Link className='link-phone-details'>
                 <center>
                   <div className='phones-img'>
                 <img src={phones.productimage} alt="" className='phones-img1'/>
@@ -85,6 +97,7 @@ const UserHomePage = () => {
                 <div className='phones-discount mb-2'>-{phones.productdiscount}</div>
                 </center>
               </Link>
+              </div>
               <center>
               <button className='btn mb-3 add-to-cart' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
               </center>

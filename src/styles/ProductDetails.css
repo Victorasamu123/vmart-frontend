@@ -1,0 +1,21 @@
+.general-div-product-details-page{
+    width: 90% !important;
+    height: fit-content !important;
+    margin-left: 70px;
+}
+.small-img-product-details{
+    width: 100px;
+}
+.big-img-product-details{
+    width: 300px;
+    margin-left: 200px;
+    margin-top: -100px;
+}
+.productname{
+    padding-top: 70px;
+}
+.productprice{
+    color:rgb(251,87,3) !important;
+    font-size: 30px;
+    font-weight: 500;
+}

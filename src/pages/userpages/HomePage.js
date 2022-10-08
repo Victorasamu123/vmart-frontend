@@ -12,7 +12,6 @@ const HomePage = () => {
       <UserNavBar/>
       <HomeNav />
       <Routes>
-        
         <Route path='/' element={token?<UserHomePage/>:<Navigate to="/signin"/>}/>
         <Route path='/:id' element={token?<ProductDetails/>:<Navigate to="/signin"/>}/>
       </Routes>
