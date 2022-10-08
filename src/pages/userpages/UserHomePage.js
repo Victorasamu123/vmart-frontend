@@ -75,12 +75,15 @@ const UserHomePage = () => {
               <div className='col-lg-2 col-md-6 col-sm-6 phone-display-div ms-3 mb-2' key={phones._id} p>
                  <Link className='link-phone-details' to={phones._id}  state={{item_id:phones._id,itemcategory:phones.productcategory}}>
                 <center>
-                <img src={phones.productimage} alt="" className='phones-img'/>
+                  <div className='phones-img'>
+                <img src={phones.productimage} alt="" className='phones-img1'/>
+                  </div>
                 <div>{phones.productname}</div>
                 <div className='phone-price'>₦{phones.productprice}</div>
-                <div className='phones-discount'>-{phones.productdiscount}</div>
+                <div className='phones-discount mb-2'>-{phones.productdiscount}</div>
                 </center>
               </Link>
+              <button className='btn mb-3' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
               </div>
             ))}
           </div>

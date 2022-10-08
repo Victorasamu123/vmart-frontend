@@ -63,6 +63,9 @@
   background-color: #F8D7DA;
   color: rgb(251,87,3);
 }
+.phones-img{
+  height: 230px;
+}
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
         width: 100% !important;
@@ -111,7 +114,10 @@
     box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
   }
   .phones-img{
-    width: 100px;
+    height: 140px;
+  }
+  .phones-img1{
+    width:100px !important;
   }
   .phone-price{
     font-size: 15px;
