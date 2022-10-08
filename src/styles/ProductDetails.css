@@ -19,3 +19,8 @@
     font-size: 30px;
     font-weight: 500;
 }
+/* 
+       axios.post(productdetailendpoints,Productdetails).then((result)=>{
+        
+        
+       }) */

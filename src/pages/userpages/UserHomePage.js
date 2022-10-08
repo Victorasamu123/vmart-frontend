@@ -10,6 +10,7 @@ const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
   const [phoneArrays, setphoneArrays]= useState([]);
+  const [messphone,setmessphone]= useState('')
   const navigate=useNavigate()
   // const [user_id, setuser_id] = useState("");
   const location=useLocation()
@@ -34,9 +35,11 @@ const UserHomePage = () => {
     })
   }
   const getPhones=()=>{
+    setmessage("")
     setloading(true);
     axios.get(getphonesendpoints).then((result)=>{
       setloading(false);
+      setmessphone(result.data.message)
       console.log(result);
       setphoneArrays(result.data.phonearray.slice(10))
     })
@@ -46,7 +49,7 @@ const UserHomePage = () => {
     let itemcategory=filteredArray[0].productcategory
     let item_id=filteredArray[0]._id
     console.log(itemcategory,item_id)
-    navigate(`/homepage/${item_id}` , {state:{item_id:item_id,itemcategory:itemcategory}})
+    navigate(`/homepage/${item_id}` , {state:{filteredArray}})
   }
   const move=()=>{
     navigate("/signin")
@@ -76,7 +79,7 @@ const UserHomePage = () => {
      <div className='user-home-page-second-div mt-2 pb-2'>
      <div className='w-100 row'>
       <h4 className='ms-3 col-lg-12 col-md-12 col-sm-12'>Top selling Phone Product</h4>
-       {loading==true?<div class="d-flex justify-content-center">
+       {messphone==""?<div class="d-flex justify-content-center">
             <div className="spinner-border text-primary" role="status">
               <span className="sr-only"></span>
             </div>

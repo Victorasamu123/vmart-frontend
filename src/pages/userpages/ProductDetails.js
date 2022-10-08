@@ -14,17 +14,18 @@ const ProductDetails = () => {
     const [productdiscount, setproductdiscount]= useState("");
     const productdetailendpoints= "http://localhost:4000/addproducts/productdetails"
     useEffect(() => {
-     console.log(location.state)
+     console.log(location.state.filteredArray)
      getdetails()
     }, [])
     
     const getdetails=()=>{
       setmessage("");
       setloading(true);
-      let itemcategory=location.state.itemcategory;
-      let item_id=location.state.item_id;
+      const item_id=location.state.filteredArray[0]._id;
+      const itemcategory=location.state.filteredArray[0].productcategory;
+      console.log(itemcategory,item_id)
       let Productdetails={item_id,itemcategory};
-       axios.post(productdetailendpoints,Productdetails).then((result)=>{
+      axios.post(productdetailendpoints,Productdetails).then((result)=>{
         console.log(result)
         setloading(false);
         setmessage(result.data.message);
@@ -34,7 +35,7 @@ const ProductDetails = () => {
         setproductdescription(result.data.product.productdescription)
         setproductprice(result.data.product.productprice)
         setproductdiscount(result.data.product.productdiscount)
-       })
+      })
     }
   return (
     <>
