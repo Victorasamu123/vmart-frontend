@@ -5,7 +5,7 @@ import img9 from "../../images/378x252_copy_17.jpg"
 import img10 from "../../images/Tripple_banner.jpg"
 import img11 from "../../images/Triple-Banner-_-378x252.jpg"
 import axios from 'axios'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
@@ -66,14 +66,19 @@ const UserHomePage = () => {
      <div className='w-100 row'>
       <h4 className='ms-3 col-lg-12 col-md-12 col-sm-12'>Top selling Phone Product</h4>
        {loading==true?<div class="d-flex justify-content-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only"></span>
+            <div className="spinner-border text-primary" role="status">
+              <span className="sr-only"></span>
             </div>
           </div>:
-          <div className='row w-100'>
+          <div className='row w-100 ms-2'>
             {phoneArrays.map((phones,index)=>(
-              <div className='col-lg-2 col-md-6 col-sm-6'>
+              <div className='col-lg-2 col-md-6 col-sm-6' key={phones._id} p>
+                 <Link className='' to={phones._id}  state={{item_id:phones._id,itemcategory:phones.productcategory}}>
+                <center>
                 <img src={phones.productimage} alt="" className='phones-img'/>
+                <div>{phones.productname}</div>
+                </center>
+              </Link>
               </div>
             ))}
           </div>
