@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes ,Navigate} from 'react-router-dom';
 import Footer from '../../components/Footer';
 import HomeNav from '../../components/HomeNav';
 import UserNavBar from '../../components/UserNavBar';
@@ -12,8 +12,9 @@ const HomePage = () => {
       <UserNavBar/>
       <HomeNav />
       <Routes>
-        <Route path='/' element={<UserHomePage/>}/>
-        <Route path='/:id' element={<ProductDetails/>}/>
+        
+        <Route path='/' element={token?<UserHomePage/>:<Navigate to="/signin"/>}/>
+        <Route path='/:id' element={token?<ProductDetails/>:<Navigate to="/signin"/>}/>
       </Routes>
     </>
   )

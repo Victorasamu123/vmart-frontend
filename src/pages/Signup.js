@@ -67,6 +67,7 @@ const Signup = () => {
           if(result.data.status===false){
             console.log("resignup")
           }else{
+            localStorage.token="23444"
             navigate("/signin")
           }
       }).catch((err)=>{
@@ -94,9 +95,9 @@ const Signup = () => {
             <input type="password" placeholder='password'className='form-control mb-4 w-75' onChange={(e)=>setpassword(e.target.value)} value={password}/>
             <div className='text-danger'>{passworderror}</div>
             {loading ? (
-              <div class="d-flex justify-content-center">
-                <div class="spinner-border text-primary" role="status">
-                  <span class="sr-only"></span>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="sr-only"></span>
                 </div>
               </div>
             ) : (

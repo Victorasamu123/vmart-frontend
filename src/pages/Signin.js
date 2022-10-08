@@ -49,9 +49,11 @@ const Signin = () => {
         if(result.data.status===true){
           if(result.data.userStatus===true){
             console.log(user_id)
+            localStorage.userId = result.data.userId
             navigate("/admindashboard")
           }else{
             console.log(user_id)
+            localStorage.userId = result.data.userId
             navigate("/homepage" , { state: { user_id:result.data.userId}})
           }
         }else{

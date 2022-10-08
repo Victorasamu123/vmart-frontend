@@ -8,15 +8,14 @@ import AdminDashboard from './pages/adminPages/AdminDashboard';
 import LandingPage from './pages/userpages/LandingPage';
 import HomePage from './pages/userpages/HomePage';
 function App() {
-  const token = localStorage.token
   return (
     <>
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/signin' element={<Signin/>}/>
-        <Route path='/admindashboard/*' element={token?<AdminDashboard/>:<Navigate to="/signin"/>}/>
-        <Route path='/homepage/*' element={token?<HomePage/>:<Navigate to="/signin"/>}/>
+        <Route path='/admindashboard/*' element={<AdminDashboard/>}/>
+        <Route path='/homepage/*' element={<HomePage/>}/>
       </Routes>
     </>
   );
