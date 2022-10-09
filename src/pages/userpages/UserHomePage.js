@@ -66,13 +66,13 @@ const UserHomePage = () => {
           <div>
           <div className='user-home-page-first-div mt-2 pb-2'>
         <div className='w-100 row'>
-          <div className='col-lg-6 col-md-12 col-sm-12'>
+          <div className='col-lg-6 col-md-6 col-sm-12'>
           <h4 className='userhome-page-h4-first mt-2'>We at vmart gives you</h4>
           <h4 className='userhome-page-h4-second'>10%</h4>
           <h4 className='userhome-page-h4-third'>discount</h4>
           <h4 className='userhome-page-h4-fourth'>on all product</h4>
           </div>
-          <div className='col-lg-6 col-md-2 col-sm-12'>
+          <div className='col-lg-6 col-md-6 col-sm-12'>
           <img src={img8} alt="" className='img-holder-landing-page-div'/>
         </div>
         </div>
@@ -98,6 +98,7 @@ const UserHomePage = () => {
                 <div>{phones.productname}</div>
                   </div>
                 <div className='phone-price'>₦{phones.productprice}</div>
+                <div className='phone-price2'>₦{phones.productprice}</div>
                 <div className='phones-discount mb-2'>-{phones.productdiscount}</div>
                 </center>
               </Link>
@@ -113,6 +114,25 @@ const UserHomePage = () => {
     </div>
      </div>
       <CompCat/>
+      <div className='user-home-page-third-div mt-2 pb-2'>
+        <div className='w-100 row'>
+        <h4 className='col-lg-12 col-md-12 col-sm-12 Dont-Miss-Out-On-These'>
+          <center>
+          Don't Miss Out On These!!!
+          </center>
+        </h4>
+        <div className='row w-100 ms-2'>
+          <div className='col-lg-12 col-sm-12 col-md-12'>
+            <center>
+             <img src={img9} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+             <img src={img10} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+             <img src={img11} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+            </center>
+
+          </div>
+        </div>
+        </div>
+      </div>
      </div>
     }
      

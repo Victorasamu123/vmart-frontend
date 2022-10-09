@@ -57,6 +57,9 @@
   font-size: 25px;
   margin-top: 20px;
 }
+.phone-price2{
+  display: none;
+}
 .phones-discount{
   width: 30px !important;
   height: fit-content !important;
@@ -77,6 +80,16 @@
 }
 .comp-img{
   width: 100px;
+}
+.user-home-page-third-div{
+  width: 90% !important;
+  height: fit-content !important;
+  background-color: white;
+  margin-left: 70px;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+}
+.dont-miss-image{
+  border-radius: 5px;
 }
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
@@ -135,8 +148,12 @@
     font-size: 15px;
     margin-top: 10px;
   }
+  .phone-price2{
+    display: block;
+  }
   .phone-name{
     height: 70px;
+    margin-bottom: 30px;
   }
   .phones-discount{
     width: 30px !important;
@@ -149,5 +166,15 @@
   }
   .add-to-cart{
     margin-top: -50px;
+  }
+  .user-home-page-third-div{
+    width: 100% !important;
+    height: fit-content !important;
+    background-color: white;
+    margin-left: 0px;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+  }
+  .dont-miss-image{
+    width: 270px;
   }
 }

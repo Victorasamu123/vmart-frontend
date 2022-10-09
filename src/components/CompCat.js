@@ -52,6 +52,7 @@ const CompCat = () => {
                 <div>{comp.productname}</div>
                   </div>
                 <div className='phone-price'>₦{comp.productprice}</div>
+                <div className='phone-price2'>₦{comp.productprice}</div>
                 <div className='phones-discount mb-2'>-{comp.productdiscount}</div>
                 </center>
               </Link>
