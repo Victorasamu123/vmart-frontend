@@ -19,7 +19,7 @@ const CompCat = () => {
           setloading(false);
           setmessphone(result.data.message)
           console.log(result);
-          setcompArrays(result.data.comparray.slice(7))
+          setcompArrays(result.data.comparray.slice(6))
         })
       }
       const goToDetails=(index)=>{
@@ -46,7 +46,7 @@ const CompCat = () => {
                  <Link className='link-phone-details'>
                 <center>
                   <div className='phones-img'>
-                <img src={comp.productimage} alt="" className='phones-img1'/>
+                <img src={comp.productimage} alt="" className='phones-img1 comp-img'/>
                   </div>
                   <div className='phone-name'>
                 <div>{comp.productname}</div>
@@ -61,7 +61,7 @@ const CompCat = () => {
               </center>
               </div>
             ))}
-            <Link to="/phonecatpage">see more phone product</Link>
+            <Link to="/phonecatpage">see more computing product</Link>
           </div>
        }
     </div>

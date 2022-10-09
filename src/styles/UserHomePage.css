@@ -75,6 +75,9 @@
 .add-to-cart{
   margin-top: -50px;
 }
+.comp-img{
+  width: 100px;
+}
 @media only screen and (max-width: 1000px) {
     .user-home-page-first-div{
         width: 100% !important;
