@@ -69,6 +69,15 @@
   top: -320px;
   left: 60px;
 }
+.comp-discount{
+  width: 30px !important;
+  height: fit-content !important;
+  background-color: #F8D7DA;
+  color: rgb(251,87,3);
+  position: relative;
+  top: -200px;
+  left: 60px;
+}
 .phones-img{
   height: 230px;
 }
@@ -156,6 +165,15 @@
     margin-bottom: 30px;
   }
   .phones-discount{
+    width: 30px !important;
+    height: fit-content !important;
+    background-color: #F8D7DA;
+    color: rgb(251,87,3);
+    position: relative;
+    top: -230px;
+    left: 30px;
+  }
+  .comp-discount{
     width: 30px !important;
     height: fit-content !important;
     background-color: #F8D7DA;

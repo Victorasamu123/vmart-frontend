@@ -45,7 +45,7 @@ const CompCat = () => {
                 <div onClick={()=>goToDetails(index)}>
                  <Link className='link-phone-details'>
                 <center>
-                  <div className='phones-img'>
+                  <div className='comp-img'>
                 <img src={comp.productimage} alt="" className='phones-img1 comp-img'/>
                   </div>
                   <div className='phone-name'>
@@ -53,7 +53,7 @@ const CompCat = () => {
                   </div>
                 <div className='phone-price'>₦{comp.productprice}</div>
                 <div className='phone-price2'>₦{comp.productprice}</div>
-                <div className='phones-discount mb-2'>-{comp.productdiscount}</div>
+                <div className='comp-discount mb-2'>-{comp.productdiscount}</div>
                 </center>
               </Link>
               </div>

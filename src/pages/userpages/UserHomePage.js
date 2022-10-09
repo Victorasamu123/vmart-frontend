@@ -121,18 +121,18 @@ const UserHomePage = () => {
           Don't Miss Out On These!!!
           </center>
         </h4>
-        <div className='row w-100 ms-2'>
+        <div className='row w-100'>
           <div className='col-lg-12 col-sm-12 col-md-12'>
             <center>
              <img src={img9} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
              <img src={img10} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
              <img src={img11} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
             </center>
-
           </div>
         </div>
         </div>
       </div>
+      
      </div>
     }
      
