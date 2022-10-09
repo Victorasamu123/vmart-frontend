@@ -6,6 +6,7 @@ import img10 from "../../images/Tripple_banner.jpg"
 import img11 from "../../images/Triple-Banner-_-378x252.jpg"
 import axios from 'axios'
 import { Link,useLocation,useNavigate } from 'react-router-dom'
+import CompCat from '../../components/CompCat'
 const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
@@ -102,7 +103,7 @@ const UserHomePage = () => {
               </Link>
               </div>
               <center>
-              <button className='btn mb-3 add-to-cart' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
+              <button className='btn mb-3 add-to-cart text-light' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
               </center>
               </div>
             ))}
@@ -111,6 +112,7 @@ const UserHomePage = () => {
        }
     </div>
      </div>
+      <CompCat/>
      </div>
     }
      
