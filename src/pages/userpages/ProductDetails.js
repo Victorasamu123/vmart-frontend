@@ -51,7 +51,7 @@ const ProductDetails = () => {
               <img src={productimage} alt="" className='small-img-product-details'/>
               <img src={productimage} alt="" className='big-img-product-details'/>
             </div>
-            <div className='col-lg-6 col-md-12 col-sm-12'>
+            <div className='col-lg-6 col-md-12 col-sm-12 div2-product-div'>
             <div className='fs-2 productname'>{productname}</div>
             <div className='productprice'>₦{productprice}</div>
             <div className='fs-2'>Category: {productcategory}</div>

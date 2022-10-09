@@ -5,6 +5,7 @@
 }
 .small-img-product-details{
     width: 100px;
+    display: inline;
 }
 .big-img-product-details{
     width: 300px;
@@ -19,8 +20,24 @@
     font-size: 30px;
     font-weight: 500;
 }
-/* 
-       axios.post(productdetailendpoints,Productdetails).then((result)=>{
-        
-        
-       }) */
+.div2-product-div{
+    margin-left: 0px;
+}
+@media only screen and (max-width: 1000px) {
+    .general-div-product-details-page{
+        width: 100% !important;
+        height: fit-content !important;
+        margin-left: 0px;
+    }
+    .small-img-product-details{
+        display: none;
+    }
+    .big-img-product-details{
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .div2-product-div{
+        margin-left: 10px;
+    }
+}
