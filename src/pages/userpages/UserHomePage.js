@@ -7,6 +7,7 @@ import img11 from "../../images/Triple-Banner-_-378x252.jpg"
 import axios from 'axios'
 import { Link,useLocation,useNavigate } from 'react-router-dom'
 import CompCat from '../../components/CompCat'
+import ElectCat from '../../components/ElectCat'
 const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
@@ -122,7 +123,7 @@ const UserHomePage = () => {
           </center>
         </h4>
         <div className='row w-100'>
-          <div className='col-lg-12 col-sm-12 col-md-12'>
+          <div className='col-lg-12 col-sm-12 col-md-12 ms-2'>
             <center>
              <img src={img9} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
              <img src={img10} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
@@ -132,7 +133,7 @@ const UserHomePage = () => {
         </div>
         </div>
       </div>
-      
+      <ElectCat/>
      </div>
     }
      
