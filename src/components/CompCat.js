@@ -62,7 +62,7 @@ const CompCat = () => {
               </center>
               </div>
             ))}
-            <Link to="/phonecatpage">see more computing product</Link>
+            <Link to="/homepage/computercategory">see more computing product</Link>
           </div>
        }
     </div>
