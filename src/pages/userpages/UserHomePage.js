@@ -110,7 +110,7 @@ const UserHomePage = () => {
               </center>
               </div>
             ))}
-            <Link to="/phonecatpage">see more phone product</Link>
+            <Link to="/homepage/phonecategory">see more phone product</Link>
           </div>
        }
     </div>
