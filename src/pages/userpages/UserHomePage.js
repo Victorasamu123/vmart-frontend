@@ -8,6 +8,7 @@ import axios from 'axios'
 import { Link,useLocation,useNavigate } from 'react-router-dom'
 import CompCat from '../../components/CompCat'
 import ElectCat from '../../components/ElectCat'
+import GameCat from '../../components/GameCat'
 const UserHomePage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
@@ -134,6 +135,7 @@ const UserHomePage = () => {
         </div>
       </div>
       <ElectCat/>
+      <GameCat/>
      </div>
     }
      
