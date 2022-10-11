@@ -89,7 +89,6 @@ const ComputerCatPage = () => {
               </center>
               </div>
             ))}
-            <Link to="/homepage/computercategory">see more computing product</Link>
           </div>
        }
     </div>

@@ -89,7 +89,6 @@ const PhoneCatPage = () => {
               </center>
               </div>
             ))}
-            <Link to="/homepage/phonecategory">see more phone product</Link>
           </div>
        }
     </div>

@@ -62,7 +62,7 @@ const ElectCat = () => {
               </center>
               </div>
             ))}
-            <Link to="/phonecatpage">see more electronics product</Link>
+            <Link to="/homepage/electronicscategory">see more electronics product</Link>
           </div>
        }
     </div>
