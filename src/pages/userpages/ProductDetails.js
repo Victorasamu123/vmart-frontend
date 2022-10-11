@@ -12,6 +12,7 @@ const ProductDetails = () => {
     const [productdescription, setproductdescription]= useState("");
     const [productprice, setproductprice]= useState("");
     const [productdiscount, setproductdiscount]= useState("");
+    const [productArray,setproductArray]=useState([])
     const productdetailendpoints= "http://localhost:4000/addproducts/productdetails"
     useEffect(() => {
      console.log(location.state.filteredArray)
@@ -21,6 +22,7 @@ const ProductDetails = () => {
     const getdetails=()=>{
       setmessage("");
       setloading(true);
+      setproductArray(location.state.filteredArray)
       const item_id=location.state.filteredArray[0]._id;
       const itemcategory=location.state.filteredArray[0].productcategory;
       console.log(itemcategory,item_id)
@@ -36,6 +38,9 @@ const ProductDetails = () => {
         setproductprice(result.data.product.productprice)
         setproductdiscount(result.data.product.productdiscount)
       })
+    }
+    const addtocart=()=>{
+       
     }
   return (
     <>
@@ -57,7 +62,7 @@ const ProductDetails = () => {
             <div className='fs-2'>Category: {productcategory}</div>
             <div className='fs-5'>Unit-price: <span className='productprice'>₦{productprice}</span></div>
             <div className='fs-4'>{productdescription}</div>
-            <button className='btn mt-4 w-75 text-light fs-4' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
+            <button className='btn mt-4 w-75 text-light fs-4' style={{backgroundColor:"rgb(251,87,3)"}} onClick={addtocart}>Add to cart</button>
             </div>
             </div>
           </div>}

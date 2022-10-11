@@ -54,8 +54,12 @@ const UserHomePage = () => {
     console.log(itemcategory,item_id)
     navigate(`/homepage/${item_id}` , {state:{filteredArray}})
   }
-  const move=()=>{
-    navigate("/signin")
+  const addtocart=(index)=>{
+    let filteredArray = phoneArrays.filter((item, ind) => index == ind);
+    let itemcategory=filteredArray[0].productcategory
+    let item_id=filteredArray[0]._id
+    console.log(filteredArray)
+    navigate(`/homepage/${item_id}` , {state:{filteredArray}})
   }
   return (
     <>

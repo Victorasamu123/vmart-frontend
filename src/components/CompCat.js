@@ -40,7 +40,7 @@ const CompCat = () => {
             </div>
           </div>:
           <div className='row w-100 ms-2'>
-            {compArrays.map((comp,index)=>(
+             {compArrays.map((comp,index)=>(
               <div className='col-lg-2 col-md-6 col-sm-6 phone-display-div ms-3 mb-2' key={comp._id}>
                 <div onClick={()=>goToDetails(index)}>
                  <Link className='link-phone-details'>
