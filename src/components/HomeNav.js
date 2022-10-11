@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/HomeNav.css"
 import icon1 from "../images/images__1_-removebg-preview.png"
-import icon6 from "../images/menu_open_FILL0_wght200_GRAD0_opsz48.svg"
+import icon6 from "../images/house-solid.svg"
 import { Link } from 'react-router-dom'
 const HomeNav = () => {
    const tryMe=()=>{
@@ -19,8 +19,15 @@ const HomeNav = () => {
           <h3 className='vmart-class-logo pt-3 vmart-class-logo2'>Vmart<img src={icon1} alt="" className='admin-logo-img' width={50}/></h3>
           <div>
             <ul>
-              <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Home</Link></li>
-              <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Categories</Link></li>
+              <li className='mb-2'><Link to="/homepage" className='link-sidenav-li mb-3'>Home</Link></li>
+              <li className='mb-2'><Link to="/homepage" className='link-sidenav-li mb-3'>Categories</Link>
+              <ul>
+              <li className='mb-2'><Link to="/homepage/phonecategory" className='link-sidenav-li mb-3'>phones</Link></li>
+              <li className='mb-2'><Link to="/homepage/computercategory" className='link-sidenav-li mb-3'>computers</Link></li>
+              <li className='mb-2'><Link to="/homepage/electronicscategory" className='link-sidenav-li mb-3'>electronics</Link></li>
+              <li className='mb-2'><Link to="/homepage/gamecategory" className='link-sidenav-li mb-3'>gaming</Link></li>
+              </ul>
+              </li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Cart</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Account</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Help</Link></li>
@@ -29,7 +36,7 @@ const HomeNav = () => {
           </div>
         </div>
         {/* <div className='fa-house-div'>
-          <Link to="/homepage" style={{color:"white" ,backgroundColor:"black",width:"90px"}}><i class="fa-solid fa-house"></i></Link>
+          <Link to="/homepage" style={{color:"white" ,backgroundColor:"green"}}></Link>
         </div> */}
       </div>
     </>
