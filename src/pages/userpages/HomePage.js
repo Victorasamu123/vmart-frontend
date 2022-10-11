@@ -3,6 +3,7 @@ import { Route, Routes ,Navigate} from 'react-router-dom';
 import Footer from '../../components/Footer';
 import HomeNav from '../../components/HomeNav';
 import UserNavBar from '../../components/UserNavBar';
+import CartPage from './CartPage';
 import ComputerCatPage from './ComputerCatPage';
 import ElectCatPage from './ElectCatPage';
 import GameCatPage from './GameCatPage';
@@ -22,6 +23,7 @@ const HomePage = () => {
         <Route path="/computercategory" element={token?<ComputerCatPage/>:<Navigate to="/signin"/>}/>
         <Route path="/electronicscategory" element={token?<ElectCatPage/>:<Navigate to="/signin"/>}/>
         <Route path="/gamecategory" element={token?<GameCatPage/>:<Navigate to="/signin"/>}/>
+        <Route path="/cart" element={token?<CartPage/>:<Navigate to="/signin"/>}/>
       </Routes>
     </>
   )
