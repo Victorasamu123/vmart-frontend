@@ -1,15 +1,16 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import "../styles/UserHomePage.css"
 import { Link,useLocation,useNavigate } from 'react-router-dom'
-
-const GameCat = () => {
+import img9 from "../../images/games/Game-Controllers-378x252-copy.jpg"
+import img10 from "../../images/games/Game-Controllers-378x252-copy-2.jpg"
+import img11 from "../../images/games/Game-Controllers-378x252-copy-3.jpg"
+const GameCatPage = () => {
     const [loading, setloading] = useState(false);
     const [message, setmessage]= useState("");
     const [gameArrays, setgameArrays]= useState([]);
     const [messgame,setmessphone]= useState('')
-    const getgameendpoints= "http://localhost:4000/addproducts/getgames"
     const navigate=useNavigate()
+    const getgameendpoints= "http://localhost:4000/addproducts/getgames"
     useEffect(() => {
         getGame()
       }, [])
@@ -20,7 +21,7 @@ const GameCat = () => {
           setloading(false);
           setmessphone(result.data.message)
           console.log(result);
-          setgameArrays(result.data.gamearray.slice(8))
+          setgameArrays(result.data.gamearray)
         })
       }
       const goToDetails=(index)=>{
@@ -32,7 +33,32 @@ const GameCat = () => {
       }
   return (
     <>
-       <div className='user-home-page-second-div mt-2 pb-2'>
+      <div className='user-home-page-second-div mt-2 pb-2'>
+     <div className='w-100 row'>
+        <h1 className='col-lg-12 col-md-12 col-sm-12'>
+           <center>Computing and accessories</center>
+        </h1>
+     </div>
+     </div>
+     <div className='user-home-page-third-div mt-2 pb-2'>
+        <div className='w-100 row'>
+        <h4 className='col-lg-12 col-md-12 col-sm-12 Dont-Miss-Out-On-These'>
+          <center>
+          Don't Miss Out On These!!!
+          </center>
+        </h4>
+        <div className='row w-100'>
+          <div className='col-lg-12 col-sm-12 col-md-12 ms-2'>
+            <center>
+             <img src={img9} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+             <img src={img10} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+             <img src={img11} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+            </center>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div className='user-home-page-second-div mt-2 pb-2'>
      <div className='w-100 row'>
       <h4 className='ms-3 col-lg-12 col-md-12 col-sm-12'>Top selling comp Product</h4>
        {messgame==""?<div class="d-flex justify-content-center">
@@ -63,7 +89,6 @@ const GameCat = () => {
               </center>
               </div>
             ))}
-            <Link to="/homepage/gamecategory">see more gaming product</Link>
           </div>
        }
     </div>
@@ -72,4 +97,4 @@ const GameCat = () => {
   )
 }
 
-export default GameCat;
+export default GameCatPage;

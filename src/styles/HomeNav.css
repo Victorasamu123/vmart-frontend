@@ -38,6 +38,11 @@ li{
   color: rgb(251,87,3);
   font-size: 20px;
 }
+.fa-house-div{
+   font-size: 40px;
+   margin-top: -60px;
+   margin-left: 100px;
+}
 @media only screen and (max-width: 1000px) {
   .side-nav-btn{
     padding-top: 15px;

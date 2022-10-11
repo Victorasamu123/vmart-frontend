@@ -28,6 +28,9 @@ const HomeNav = () => {
             </ul>
           </div>
         </div>
+        {/* <div className='fa-house-div'>
+          <Link to="/homepage" style={{color:"white" ,backgroundColor:"black",width:"90px"}}><i class="fa-solid fa-house"></i></Link>
+        </div> */}
       </div>
     </>
   )
