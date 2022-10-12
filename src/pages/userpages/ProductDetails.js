@@ -14,6 +14,7 @@ const ProductDetails = () => {
     const [productdiscount, setproductdiscount]= useState("");
     const [productArray,setproductArray]=useState([])
     const productdetailendpoints= "http://localhost:4000/addproducts/productdetails"
+    const addtoendpoints= "http://localhost:4000/cart/addtocart"
     useEffect(() => {
      console.log(location.state.filteredArray)
      getdetails()
@@ -40,7 +41,7 @@ const ProductDetails = () => {
       })
     }
     const addtocart=()=>{
-       
+      axios.post(addtoendpoints,location.state.filteredArray)
     }
   return (
     <>
@@ -62,7 +63,7 @@ const ProductDetails = () => {
             <div className='fs-2'>Category: {productcategory}</div>
             <div className='fs-5'>Unit-price: <span className='productprice'>₦{productprice}</span></div>
             <div className='fs-4'>{productdescription}</div>
-            <button className='btn mt-4 w-75 text-light fs-4' style={{backgroundColor:"rgb(251,87,3)"}} onClick={addtocart}>Add to cart</button>
+            <button className='btn mt-4 w-75 text-light' style={{backgroundColor:"rgb(251,87,3)"}} onClick={addtocart}>Add to cart</button>
             </div>
             </div>
           </div>}

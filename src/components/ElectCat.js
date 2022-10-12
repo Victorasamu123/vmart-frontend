@@ -8,6 +8,7 @@ const ElectCat = () => {
     const [electArrays, setelectArrays]= useState([]);
     const [messelect,setmessphone]= useState('')
     const getelectendpoints= "http://localhost:4000/addproducts/getelects"
+    const addtoendpoints= "http://localhost:4000/cart/addtocart"
     const navigate=useNavigate()
     useEffect(() => {
         getELect()
@@ -28,6 +29,11 @@ const ElectCat = () => {
         let item_id=filteredArray[0]._id
         console.log(itemcategory,item_id)
         navigate(`/homepage/${item_id}` , {state:{filteredArray}})
+      }
+      const addtocart=(index)=>{
+        let filteredArray = electArrays.filter((item, ind) => index == ind);
+        console.log(filteredArray)
+        axios.post(addtoendpoints,filteredArray)
       }
   return (
     <>
@@ -58,7 +64,7 @@ const ElectCat = () => {
               </Link>
               </div>
               <center>
-              <button className='btn mb-3 add-to-cart text-light' style={{backgroundColor:"rgb(251,87,3)"}}>Add to cart</button>
+              <button className='btn mb-3 add-to-cart text-light' style={{backgroundColor:"rgb(251,87,3)"}} onClick={()=>addtocart(index)}>Add to cart</button>
               </center>
               </div>
             ))}
