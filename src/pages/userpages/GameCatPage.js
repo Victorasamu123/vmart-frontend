@@ -42,7 +42,8 @@ const GameCatPage = () => {
         let productdescription=filteredArray[0].productdescription
         let productprice=filteredArray[0].productprice
         let productdiscount=filteredArray[0].productdiscount
-        let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount}
+        let userId=localStorage.userId
+        let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount,userId}
         axios.post(addtoendpoints,cartObj).then((result)=>{
           console.log(result.data.message);
           setmesscart(result.data.message);

@@ -28,7 +28,7 @@ const HomeNav = ({homecol}) => {
               <li className='mb-2'><Link to="/homepage/gamecategory" className='link-sidenav-li mb-3'>gaming</Link></li>
               </ul>
               </li>
-              <li className='mb-2'><Link to="/cart" className='link-sidenav-li mb-3'>Cart</Link></li>
+              <li className='mb-2'><Link to="/homepage/cart" className='link-sidenav-li mb-3'>Cart</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Account</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Help</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Logout</Link></li>
