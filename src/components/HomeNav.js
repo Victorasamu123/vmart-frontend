@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/HomeNav.css"
 import icon1 from "../images/images__1_-removebg-preview.png"
-import icon6 from "../images/house-solid.svg"
+import icon6 from "../images/menu_FILL0_wght400_GRAD0_opsz40.svg"
 import { Link } from 'react-router-dom'
 const HomeNav = ({homecol}) => {
    const tryMe=()=>{
@@ -13,7 +13,7 @@ const HomeNav = ({homecol}) => {
   return (
     <>
       <div className='general-div-home-nav'>
-        <span onClick={tryMe} className="side-nav-btn"><i class="fa-solid fa-bars"></i></span>
+        <span onClick={tryMe} className="side-nav-btn"><img src={icon6} alt=""/></span>
         <div id='sideNavBar'>
           <div onClick={close} className="side-nav-btn-close">&times;</div>
           <h3 className='vmart-class-logo pt-3 vmart-class-logo2'>Vmart<img src={icon1} alt="" className='admin-logo-img' width={50}/></h3>

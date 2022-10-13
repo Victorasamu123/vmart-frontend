@@ -14,6 +14,7 @@ const UserHomePage = () => {
   const [message, setmessage]= useState("");
   const [phoneArrays, setphoneArrays]= useState([]);
   const [messphone,setmessphone]= useState('')
+  const [messcart,setmesscart]= useState('')
   const navigate=useNavigate()
   // const [user_id, setuser_id] = useState("");
   const location=useLocation()
@@ -58,13 +59,17 @@ const UserHomePage = () => {
   const addtocart=(index)=>{
     let filteredArray = phoneArrays.filter((item, ind) => index == ind);
     console.log(filteredArray)
-    axios.post(addtoendpoints,filteredArray)
+    // let 
+    axios.post(addtoendpoints,filteredArray).then((result)=>{
+      console.log(result.data.message);
+      setmesscart(result.data.message);
+    })
   }
   return (
     <>
-    {message==""?<div class="d-flex justify-content-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only"></span>
+    {message==""?<div className="d-flex justify-content-center">
+            <div className="spinner-border text-primary" role="status">
+              <span className="sr-only"></span>
             </div>
           </div>
           :
