@@ -59,8 +59,14 @@ const UserHomePage = () => {
   const addtocart=(index)=>{
     let filteredArray = phoneArrays.filter((item, ind) => index == ind);
     console.log(filteredArray)
-    // let 
-    axios.post(addtoendpoints,filteredArray).then((result)=>{
+    let productimage=filteredArray[0].productimage
+    let productname=filteredArray[0].productname
+    let productcategory=filteredArray[0].productcategory
+    let productdescription=filteredArray[0].productdescription
+    let productprice=filteredArray[0].productprice
+    let productdiscount=filteredArray[0].productdiscount
+    let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount}
+    axios.post(addtoendpoints,cartObj).then((result)=>{
       console.log(result.data.message);
       setmesscart(result.data.message);
     })
@@ -146,7 +152,6 @@ const UserHomePage = () => {
       <GameCat/>
      </div>
     }
-     
     </>
   )
 }

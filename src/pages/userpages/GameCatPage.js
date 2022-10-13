@@ -9,6 +9,7 @@ const GameCatPage = () => {
     const [message, setmessage]= useState("");
     const [gameArrays, setgameArrays]= useState([]);
     const [messgame,setmessphone]= useState('')
+    const [messcart,setmesscart]= useState('')
     const navigate=useNavigate()
     const getgameendpoints= "http://localhost:4000/addproducts/getgames"
     const addtoendpoints= "http://localhost:4000/cart/addtocart"
@@ -35,7 +36,17 @@ const GameCatPage = () => {
       const addtocart=(index)=>{
         let filteredArray = gameArrays.filter((item, ind) => index == ind);
         console.log(filteredArray)
-        axios.post(addtoendpoints,filteredArray)
+        let productimage=filteredArray[0].productimage
+        let productname=filteredArray[0].productname
+        let productcategory=filteredArray[0].productcategory
+        let productdescription=filteredArray[0].productdescription
+        let productprice=filteredArray[0].productprice
+        let productdiscount=filteredArray[0].productdiscount
+        let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount}
+        axios.post(addtoendpoints,cartObj).then((result)=>{
+          console.log(result.data.message);
+          setmesscart(result.data.message);
+        })
       }
   return (
     <>

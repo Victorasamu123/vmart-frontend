@@ -13,6 +13,7 @@ const ProductDetails = () => {
     const [productprice, setproductprice]= useState("");
     const [productdiscount, setproductdiscount]= useState("");
     const [productArray,setproductArray]=useState([])
+    const [messcart,setmesscart]= useState('')
     const productdetailendpoints= "http://localhost:4000/addproducts/productdetails"
     const addtoendpoints= "http://localhost:4000/cart/addtocart"
     useEffect(() => {
@@ -41,7 +42,18 @@ const ProductDetails = () => {
       })
     }
     const addtocart=()=>{
-      axios.post(addtoendpoints,location.state.filteredArray)
+      let filteredArray=location.state.filteredArray
+      let productimage=filteredArray[0].productimage
+      let productname=filteredArray[0].productname
+      let productcategory=filteredArray[0].productcategory
+      let productdescription=filteredArray[0].productdescription
+      let productprice=filteredArray[0].productprice
+      let productdiscount=filteredArray[0].productdiscount
+      let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount}
+      axios.post(addtoendpoints,cartObj).then((result)=>{
+        console.log(result.data.message);
+        setmesscart(result.data.message);
+      })
     }
   return (
     <>

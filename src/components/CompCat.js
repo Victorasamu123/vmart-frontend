@@ -7,6 +7,7 @@ const CompCat = () => {
     const [message, setmessage]= useState("");
     const [compArrays, setcompArrays]= useState([]);
     const [messcomp,setmessphone]= useState('')
+    const [messcart,setmesscart]= useState('')
     const getcompendpoints= "http://localhost:4000/addproducts/getcomps"
     const addtoendpoints= "http://localhost:4000/cart/addtocart"
     const navigate=useNavigate()
@@ -33,7 +34,17 @@ const CompCat = () => {
       const addtocart=(index)=>{
         let filteredArray = compArrays.filter((item, ind) => index == ind);
         console.log(filteredArray)
-        axios.post(addtoendpoints,filteredArray)
+        let productimage=filteredArray[0].productimage
+        let productname=filteredArray[0].productname
+        let productcategory=filteredArray[0].productcategory
+        let productdescription=filteredArray[0].productdescription
+        let productprice=filteredArray[0].productprice
+        let productdiscount=filteredArray[0].productdiscount
+        let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount}
+        axios.post(addtoendpoints,cartObj).then((result)=>{
+          console.log(result.data.message);
+          setmesscart(result.data.message);
+        })
       }
   return (
     <>
