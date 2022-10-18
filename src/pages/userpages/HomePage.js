@@ -7,6 +7,7 @@ import CartPage from './CartPage';
 import ComputerCatPage from './ComputerCatPage';
 import ElectCatPage from './ElectCatPage';
 import GameCatPage from './GameCatPage';
+import Payments from './Payments';
 import PhoneCatPage from './PhoneCatPage';
 import ProductDetails from './ProductDetails';
 import UserHomePage from './UserHomePage';
@@ -24,6 +25,7 @@ const HomePage = () => {
         <Route path="/electronicscategory" element={token?<ElectCatPage/>:<Navigate to="/signin"/>}/>
         <Route path="/gamecategory" element={token?<GameCatPage/>:<Navigate to="/signin"/>}/>
         <Route path="/cart" element={token?<CartPage/>:<Navigate to="/signin"/>}/>
+        <Route path="/payment" element={token?<Payments/>:<Navigate to="/signin"/>}/>
       </Routes>
     </>
   )
