@@ -30,15 +30,26 @@ const ProductDetails = () => {
       console.log(itemcategory,item_id)
       let Productdetails={item_id,itemcategory};
       axios.post(productdetailendpoints,Productdetails).then((result)=>{
-        console.log(result)
-        setloading(false);
-        setmessage(result.data.message);
-        setproductimage(result.data.product.productimage)
-        setproductname(result.data.product.productname)
-        setproductcategory(result.data.product.productcategory)
-        setproductdescription(result.data.product.productdescription)
-        setproductprice(result.data.product.productprice)
-        setproductdiscount(result.data.product.productdiscount)
+        if(result.data.status==true){
+          console.log(result)
+          setloading(false);
+          setmessage(result.data.message);
+          setproductimage(result.data.product.productimage)
+          setproductname(result.data.product.productname)
+          setproductcategory(result.data.product.productcategory)
+          setproductdescription(result.data.product.productdescription)
+          setproductprice(result.data.product.productprice)
+          setproductdiscount(result.data.product.productdiscount)
+        }else{
+          setmessage("");
+          setloading(true);
+          setproductimage("")
+          setproductname("")
+          setproductcategory("")
+          setproductdescription("")
+          setproductdiscount("")
+        }
+        
       })
     }
     const addtocart=()=>{

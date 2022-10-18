@@ -54,6 +54,7 @@ const Signin = () => {
           }else{
             console.log(user_id)
             localStorage.userId = result.data.userId
+            localStorage.email= result.data.email
             navigate("/homepage" , { state: { user_id:result.data.userId}})
           }
         }else{

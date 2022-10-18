@@ -34,19 +34,31 @@ const UserHomePage = () => {
     console.log(user_id);
     let getDashboard={user_id}
     axios.post(endpoints,getDashboard).then((result)=>{
-      setloading(false);
+      if(result.data.status==true){
+        setloading(false);
       setmessage(result.data.message);
       console.log(result)
+      }else{
+        setmessage("");
+        setloading(true);
+      }
+      
     })
   }
   const getPhones=()=>{
     setmessage("")
     setloading(true);
     axios.get(getphonesendpoints).then((result)=>{
-      setloading(false);
-      setmessphone(result.data.message)
-      console.log(result);
-      setphoneArrays(result.data.phonearray.slice(10))
+      if(result.data.status==true){
+        setloading(false);
+        setmessphone(result.data.message)
+        console.log(result);
+        setphoneArrays(result.data.phonearray.slice(10))
+      }else{
+        setmessage("")
+        setloading(true);
+        setphoneArrays([])
+      }
     })
   }
   const goToDetails=(index)=>{
