@@ -18,10 +18,16 @@ const ElectCat = () => {
         setmessage("")
         setloading(true);
         axios.get(getelectendpoints).then((result)=>{
-          setloading(false);
-          setmessphone(result.data.message);
-          console.log(result);
-          setelectArrays(result.data.electarray.slice(7))
+          if(result.data.status){
+            setloading(false);
+            setmessphone(result.data.message);
+            console.log(result);
+            setelectArrays(result.data.electarray.slice(7))
+          }else{
+            setmessage("")
+            setloading(true);
+            setelectArrays([])
+          }
         })
       }
       const goToDetails=(index)=>{

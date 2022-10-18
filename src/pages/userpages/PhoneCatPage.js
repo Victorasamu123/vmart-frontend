@@ -20,10 +20,16 @@ const PhoneCatPage = () => {
         setmessage("")
         setloading(true);
         axios.get(getphonesendpoints).then((result)=>{
-          setloading(false);
-          setmessphone(result.data.message)
-          console.log(result);
-          setphoneArrays(result.data.phonearray)
+          if(result.data.status==true){
+            setloading(false);
+            setmessphone(result.data.message)
+            console.log(result);
+            setphoneArrays(result.data.phonearray)
+          }else{
+            setmessage("")
+            setloading(true);
+            setphoneArrays([])
+          }
         })
       }
       const goToDetails=(index)=>{

@@ -20,10 +20,16 @@ const ComputerCatPage = () => {
         setmessage("")
         setloading(true);
         axios.get(getcompendpoints).then((result)=>{
-          setloading(false);
-          setmessphone(result.data.message)
-          console.log(result);
-          setcompArrays(result.data.comparray)
+          if(result.data.status==true){
+            setloading(false);
+            setmessphone(result.data.message)
+            console.log(result);
+            setcompArrays(result.data.comparray)
+          }else{
+            setmessage("")
+            setloading(true);
+            setcompArrays([]);
+          }
         })
       }
       const goToDetails=(index)=>{

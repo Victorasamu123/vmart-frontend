@@ -20,10 +20,16 @@ const ElectCatPage = () => {
         setmessage("")
         setloading(true);
         axios.get(getelectendpoints).then((result)=>{
-          setloading(false);
-          setmessphone(result.data.message)
-          console.log(result);
-          setelectArrays(result.data.electarray)
+          if(result.data.status==true){
+            setloading(false);
+            setmessphone(result.data.message)
+            console.log(result);
+            setelectArrays(result.data.electarray)
+          }else{
+            setmessage("")
+            setloading(true);
+            setelectArrays([])
+          }
         })
       }
       const goToDetails=(index)=>{

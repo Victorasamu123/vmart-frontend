@@ -23,16 +23,26 @@ const CartPage = () => {
     setloading(true);
     let getcartpageobj={userId}
     axios.post(cartendpoints,getcartpageobj).then((result)=>{
-      console.log(result)
-      setloading(false);
-      setmessage(result.data.message);
-      setcartArray(result.data.cartresult.reverse())
+      if(result.data.status==true){
+        console.log(result)
+        setloading(false);
+        setmessage(result.data.message);
+        setcartArray(result.data.cartresult.reverse())
+      }else{
+        setmessage("");
+        setloading(true);
+        setcartArray([])
+      }
     })
   }
   const getsaveitem=()=>{
     let getsaveitemObj={userId}
     axios.post(getsaveitendpoints,getsaveitemObj).then((result)=>{
-      setsaveitemsArray(result.data.saveitemresult)
+      if(result.data.status){
+        setsaveitemsArray(result.data.saveitemresult)
+      }else{
+        setsaveitemsArray([])
+      }
     })
   }
   const proceedtopayment=(index)=>{

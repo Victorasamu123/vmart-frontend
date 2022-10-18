@@ -18,10 +18,16 @@ const CompCat = () => {
         setmessage("")
         setloading(true);
         axios.get(getcompendpoints).then((result)=>{
-          setloading(false);
-          setmessphone(result.data.message)
-          console.log(result);
-          setcompArrays(result.data.comparray.slice(6))
+          if(result.data.status){
+            setloading(false);
+            setmessphone(result.data.message)
+            console.log(result);
+            setcompArrays(result.data.comparray.slice(6))
+          }else{
+            setmessage("")
+            setloading(true);
+            setcompArrays([])
+          }
         })
       }
       const goToDetails=(index)=>{

@@ -20,10 +20,16 @@ const GameCatPage = () => {
         setmessage("")
         setloading(true);
         axios.get(getgameendpoints).then((result)=>{
-          setloading(false);
-          setmessphone(result.data.message)
-          console.log(result);
-          setgameArrays(result.data.gamearray)
+          if(result.data.status==true){
+            setloading(false);
+            setmessphone(result.data.message)
+            console.log(result);
+            setgameArrays(result.data.gamearray)
+          }else{
+            setmessage("")
+            setloading(true);
+            setgameArrays([])
+          }
         })
       }
       const goToDetails=(index)=>{
