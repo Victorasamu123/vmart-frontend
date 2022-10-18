@@ -23,6 +23,10 @@
 .div2-product-div{
     margin-left: 0px;
 }
+.message-display{
+    position: fixed;
+    top: -290px;
+}
 @media only screen and (max-width: 1000px) {
     .general-div-product-details-page{
         width: 100% !important;

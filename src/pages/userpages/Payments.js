@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import PaystackPop from "@paystack/inline-js"
 import { useLocation } from 'react-router-dom'
+import axios from 'axios'
+import "../../styles/ProductDetails.css"
 const Payments = () => {
     const location = useLocation()
     const email=localStorage.email
@@ -8,6 +10,8 @@ const Payments = () => {
     const [firstname, setfirstname] = useState("")
     const [lastname, setlastname] = useState("")
     const [amount, setamount] = useState("")
+    const [message,setmessage]=useState("")
+    const transactionsendpoints ="http://localhost:4000/cart/transactions"
     useEffect(() => {
      getValue()
     }, [])
@@ -18,6 +22,8 @@ const Payments = () => {
         let email=localStorage.email
         let userId = localStorage.userId
         e.preventDefault()
+        let productname2=location.state.filteredArray[0].productname
+        console.log(productname2)
         const paystack = new PaystackPop()
         paystack.newTransaction({
             key:"pk_test_8450d0b1f1e6e0c8b67fb020e21d4802a6d8c4dd",
@@ -25,9 +31,18 @@ const Payments = () => {
             email:email,
             firstname:firstname,
             lastname:lastname,
-            onSucess(transaction){
+            onSuccess(transaction){
                 let message=`Payment Complete! Reference ${transaction.reference}`
-                alert(message)
+                let transactionObj={firstname,lastname,amount,email,userId,productname2}
+                console.log(transactionObj);
+                setmessage("")
+                axios.post(transactionsendpoints,transactionObj).then((result)=>{
+                    setmessage(result.data.message)
+                    console.log(result);
+                    setTimeout(() => {
+                        setmessage("")
+                    }, 1500);
+                })
             },
             onCancel(){
                 window.confirm("are you sure you want to cancel this transaction")
@@ -46,6 +61,12 @@ const Payments = () => {
                 <button className="btn btn-primary w-100 mb-2" onClick={(e)=>makepayment(e)}>Pay</button>
             </div>
         </div>
+        <center>
+            {message==""?<div></div>
+             :
+             <div className='message-display alert alert-success fs-1'>{message}</div>
+            }
+        </center>
       </div>
     </>
   )
