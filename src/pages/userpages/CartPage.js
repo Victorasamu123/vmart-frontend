@@ -14,6 +14,7 @@ const CartPage = () => {
   const deleteitemendpoints = "http://localhost:4000/cart/removeitem"
   const getsaveitendpoints = "http://localhost:4000/cart/getsaveitem"
   const addtoendpoints2= "http://localhost:4000/cart/addtocart2"
+  const navigate=useNavigate()
   useEffect(() => {
     getcart()
     getsaveitem()
@@ -46,7 +47,8 @@ const CartPage = () => {
     })
   }
   const proceedtopayment=(index)=>{
-    alert(index)
+    let filteredArray= cartArray.filter((item,ind)=>index == ind)
+    navigate("/homepage/payment",{state:{filteredArray}})
   }
   const saveitem=(index)=>{
     let filteredArray = cartArray.filter((item, ind) => index == ind);
