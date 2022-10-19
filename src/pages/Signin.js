@@ -50,6 +50,7 @@ const Signin = () => {
           if(result.data.userStatus===true){
             console.log(user_id)
             localStorage.userId = result.data.userId
+            localStorage.email= result.data.email
             navigate("/admindashboard")
           }else{
             console.log(user_id)
@@ -76,9 +77,9 @@ const Signin = () => {
             <input type="password" placeholder='password'className='form-control mb-4 w-75' onChange={(e)=>setpassword(e.target.value)} value={password}/>
             <div className='text-danger'>{passworderror}</div>
             {loading ? (
-              <div class="d-flex justify-content-center">
-                <div class="spinner-border text-primary" role="status">
-                  <span class="sr-only"></span>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="sr-only"></span>
                 </div>
               </div>
             ) : (

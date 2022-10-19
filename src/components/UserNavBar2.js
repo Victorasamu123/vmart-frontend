@@ -4,13 +4,13 @@ import "../styles/UserNavBar.css"
 import icon3 from "../images/person-outline.svg"
 import icon4 from "../images/file-tray-stacked-outline.svg"
 import icon5 from "../images/heart-outline.svg"
-
+import icon6 from "../images/menu_open_FILL0_wght200_GRAD0_opsz48.svg"
 const UserNavBar2 = () => {
   return (
     <>
       <div className='general-navbar2-div'>
       <img src={icon6} data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" className="fa-soli mt-4" alt="" />
-     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+     <div className="offcanvas offcanvas-start" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
      <div className="offcanvas-header">
     <h5 className="offcanvas-title" id="staticBackdropLabel">Select category</h5>
     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

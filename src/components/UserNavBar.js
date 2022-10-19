@@ -19,8 +19,8 @@ const UserNavBar = () => {
                     <div className=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Help
                     </div>
-                    <ul class="dropdown-menu">
-                        <li><Link to="/signin" className="dropdown-item" ><button class="btn btn-info w-75 ms-3" style={{backgroundColor:"rgb(251,87,3)"}}>Help</button></Link></li>
+                    <ul className="dropdown-menu">
+                        <li><Link to="/signin" className="dropdown-item" ><button className="btn btn-info w-75 ms-3" style={{backgroundColor:"rgb(251,87,3)"}}>Help</button></Link></li>
                       <li><Link to="/signin" className="dropdown-item" href="">Orders Cancillation</Link></li>
                       <li><Link to="/signin" className="dropdown-item" href="">Returns and Refunds</Link></li>
                       <li><Link to="/signin" className="dropdown-item" href="">Vmart payment</Link></li>

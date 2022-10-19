@@ -36,8 +36,7 @@ const Payments = () => {
                 alert(message)
                 let ref=transaction.reference
                 let date = new Date()
-                
-                let transactionObj={firstname,lastname,amount,email,userId,productname2,ref}
+                let transactionObj={firstname,lastname,amount,email,userId,productname2,ref,date}
                 console.log(transactionObj);
                 setmessage("")
                 axios.post(transactionsendpoints,transactionObj).then((result)=>{

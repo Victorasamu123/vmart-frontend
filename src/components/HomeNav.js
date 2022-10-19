@@ -13,9 +13,9 @@ const HomeNav = ({homecol}) => {
   return (
     <>
       <div className='general-div-home-nav'>
-        <span onClick={tryMe} className="side-nav-btn"><img src={icon6} alt=""/></span>
+        <span onClick={tryMe} className="side-nav-btn" style={{cursor:"pointer"}}><img src={icon6} alt=""/></span>
         <div id='sideNavBar'>
-          <div onClick={close} className="side-nav-btn-close">&times;</div>
+          <div onClick={close} className="side-nav-btn-close" style={{cursor:"pointer"}}>&times;</div>
           <h3 className='vmart-class-logo pt-3 vmart-class-logo2'>Vmart<img src={icon1} alt="" className='admin-logo-img' width={50}/></h3>
           <div>
             <ul>
