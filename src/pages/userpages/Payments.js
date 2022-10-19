@@ -33,7 +33,11 @@ const Payments = () => {
             lastname:lastname,
             onSuccess(transaction){
                 let message=`Payment Complete! Reference ${transaction.reference}`
-                let transactionObj={firstname,lastname,amount,email,userId,productname2}
+                alert(message)
+                let ref=transaction.reference
+                let date = new Date()
+                
+                let transactionObj={firstname,lastname,amount,email,userId,productname2,ref}
                 console.log(transactionObj);
                 setmessage("")
                 axios.post(transactionsendpoints,transactionObj).then((result)=>{
