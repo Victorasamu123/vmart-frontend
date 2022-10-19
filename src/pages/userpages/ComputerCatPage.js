@@ -85,7 +85,7 @@ const ComputerCatPage = () => {
       <div className='user-home-page-second-div mt-2 pb-2'>
      <div className='w-100 row'>
       <h4 className='ms-3 col-lg-12 col-md-12 col-sm-12'>Top selling comp Product</h4>
-       {messcomp==""?<div class="d-flex justify-content-center">
+       {messcomp==""?<div className="d-flex justify-content-center">
             <div className="spinner-border text-primary" role="status">
               <span className="sr-only"></span>
             </div>

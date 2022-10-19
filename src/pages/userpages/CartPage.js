@@ -136,8 +136,8 @@ const CartPage = () => {
               <div className='fs-2'>Category: {cart.productcategory}</div>
               <div className='fs-5'>Unit-price: <span className='productprice'>₦{cart.productprice}</span></div>
               <div className='fs-4'>{cart.productdescription}</div>
-              <button type="button" class="btn mt-4 w-75 text-light mb-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{backgroundColor:"rgb(251,87,3)"}}>
-              <i class="fa-solid fa-trash" style={{fontSize:"20px"}}></i> Remove item
+              <button type="button" className="btn mt-4 w-75 text-light mb-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style={{backgroundColor:"rgb(251,87,3)"}}>
+              <i className="fa-solid fa-trash" style={{fontSize:"20px"}}></i> Remove item
              </button>
               <button className='btn mt-4 w-75 text-light mb-3' style={{backgroundColor:"rgb(251,87,3)"}} onClick={()=>proceedtopayment(index)}>proceed to payment</button>
               <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -148,10 +148,10 @@ const CartPage = () => {
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-      <button className='btn mt-4 w-75 text-light mb-3' style={{backgroundColor:"rgb(251,87,3)"}} onClick={()=>saveitem(index)} data-bs-dismiss="modal"><i class="fa-solid fa-heart"style={{fontSize:"20px"}} ></i>Save Item</button>
-      <button className='btn mt-4 w-75 text-light mb-3' style={{backgroundColor:"rgb(251,87,3)"}} onClick={()=>removeitem(index)} data-bs-dismiss="modal"><i class="fa-solid fa-trash" style={{fontSize:"20px"}}></i>Remove item</button>
+      <button className='btn mt-4 w-75 text-light mb-3' style={{backgroundColor:"rgb(251,87,3)"}} onClick={()=>saveitem(index)} data-bs-dismiss="modal"><i className="fa-solid fa-heart"style={{fontSize:"20px"}} ></i>Save Item</button>
+      <button className='btn mt-4 w-75 text-light mb-3' style={{backgroundColor:"rgb(251,87,3)"}} onClick={()=>removeitem(index)} data-bs-dismiss="modal"><i className="fa-solid fa-trash" style={{fontSize:"20px"}}></i>Remove item</button>
       </div>
-      <div class="modal-footer">
+      <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" className="btn " style={{backgroundColor:"rgb(251,87,3)"}}>vmart</button>
            </div>

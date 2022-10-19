@@ -37,7 +37,7 @@ const HomeNav = ({homecol}) => {
         </div>
         <span>
           <Link to="/homepage" className="bg-success">
-            <i class="fa-solid fa-house"></i>
+            <i className="fa-solid fa-house"></i>
           </Link>
         </span>
       </div>

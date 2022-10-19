@@ -69,9 +69,9 @@ const ProductDetails = () => {
     }
   return (
     <>
-      {message==""?<div class="d-flex justify-content-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only"></span>
+      {message==""?<div className="d-flex justify-content-center">
+            <div className="spinner-border text-primary" role="status">
+              <span className="sr-only"></span>
             </div>
           </div>
           :<div className='general-div-product-details-page'>
