@@ -57,9 +57,9 @@ const TransactionPage = () => {
                 transactionArray.map((item,index)=>(
                <tr key={item._id}>
                  <td className='transa-td'>₦{item.amount}</td>
-                 <td className='transa-td'>Mark</td>
-                 <td className='transa-td'>Otto</td>
-                 <td className='transa-td'>@mdo</td>
+                 <td className='transa-td'>{item.productname2}</td>
+                 <td className='transa-td'>{item.ref}</td>
+                 <td className='transa-td'>{item.date}</td>
                </tr>
                 ))
               }
