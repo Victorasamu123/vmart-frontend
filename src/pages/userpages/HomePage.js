@@ -10,6 +10,7 @@ import GameCatPage from './GameCatPage';
 import Payments from './Payments';
 import PhoneCatPage from './PhoneCatPage';
 import ProductDetails from './ProductDetails';
+import TransactionPage from './TransactionPage';
 import UserHomePage from './UserHomePage';
 const HomePage = () => {
   let token = localStorage.token
@@ -26,6 +27,7 @@ const HomePage = () => {
         <Route path="/gamecategory" element={token?<GameCatPage/>:<Navigate to="/signin"/>}/>
         <Route path="/cart" element={token?<CartPage/>:<Navigate to="/signin"/>}/>
         <Route path="/payment" element={token?<Payments/>:<Navigate to="/signin"/>}/>
+        <Route path='/transactionpage' element={token?<TransactionPage/>:<Navigate to="/signin"/>}/>
       </Routes>
     </>
   )

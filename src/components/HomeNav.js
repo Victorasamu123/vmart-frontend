@@ -30,7 +30,7 @@ const HomeNav = ({homecol}) => {
               </li>
               <li className='mb-2'><Link to="/homepage/cart" className='link-sidenav-li mb-3'>Cart</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Account</Link></li>
-              <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Help</Link></li>
+              <li className='mb-2'><Link to="/homepage/transactionpage" className='link-sidenav-li mb-3'>Transaction History</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Logout</Link></li>
             </ul>
           </div>
