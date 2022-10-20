@@ -31,13 +31,18 @@ const HomeNav = ({homecol}) => {
               <li className='mb-2'><Link to="/homepage/cart" className='link-sidenav-li mb-3'>Cart</Link></li>
               <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Account</Link></li>
               <li className='mb-2'><Link to="/homepage/transactionpage" className='link-sidenav-li mb-3'>Transaction History</Link></li>
-              <li className='mb-2'><Link to="/" className='link-sidenav-li mb-3'>Logout</Link></li>
+              <li className='mb-2'><Link to="/signin" className='link-sidenav-li mb-3'>Logout</Link></li>
             </ul>
           </div>
         </div>
         <span>
-          <Link to="/homepage" className="bg-success">
+          <Link to="/homepage" className="">
             <i className="fa-solid fa-house"></i>
+          </Link>
+        </span>
+        <span>
+          <Link to="/homepage/cart">
+          <i class="fa-solid fa-cart-shopping"></i>
           </Link>
         </span>
       </div>

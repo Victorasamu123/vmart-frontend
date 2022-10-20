@@ -43,6 +43,18 @@ li{
    margin-top: -60px;
    margin-left: 100px;
 }
+.fa-house{
+  font-size: 30px;
+  color: white !important;
+  margin-top: 13px;
+  margin-left: 500px;
+}
+.fa-cart-shopping{
+  font-size: 30px;
+  color: white !important;
+  margin-top: 13px;
+  margin-left: 600px;
+}
 @media only screen and (max-width: 1000px) {
   .side-nav-btn{
     padding-top: 15px;
@@ -61,5 +73,17 @@ li{
     transition: 0.5s;
     padding-top: 60px;
     box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%);
+  }
+  .fa-house{
+    font-size: 30px;
+    color: white !important;
+    margin-top: 13px;
+    margin-left: 70px;
+  }
+  .fa-cart-shopping{
+    font-size: 30px;
+    color: white !important;
+    margin-top: 14px;
+    margin-left: 100px;
   }
 }
