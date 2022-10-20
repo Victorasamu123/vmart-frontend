@@ -23,9 +23,39 @@
     color: white !important;
     margin-left: 50px;
 }
-
-
+.copyright-div{
+    color: white !important;
+    margin-top: 100px;
+}
 
 @media only screen and (max-width: 1000px) {
-
+    .footer-general-div{
+        width: 100% !important;
+        height: 250px;
+        background-color: rgb(251,87,3);
+    }
+    .fa-linkedin{
+        font-size: 20px;
+        color: white !important;
+        margin-left: 20px;
+    }
+    .fa-square-github{
+        font-size: 30px;
+        color: white !important;
+        margin-left: 20px;
+    }
+    .fa-twitter{
+        font-size: 30px;
+        color: white !important;
+        margin-left: 20px;
+    }
+    .fa-facebook{
+        font-size: 30px;
+        color: white !important;
+        margin-left: 20px;
+    }
+    .copyright-div{
+        color: white !important;
+        margin-top:50px;
+    }
 }

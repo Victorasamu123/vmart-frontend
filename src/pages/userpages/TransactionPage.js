@@ -43,7 +43,7 @@ const TransactionPage = () => {
           <div>
             {transactionArray==""?<h1><center>No transactions</center></h1>
              :
-             <table className="table">
+             <table className="table mb-5">
              <thead>
                <tr>
                  <th scope="col">Amount</th>

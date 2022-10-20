@@ -13,9 +13,9 @@ const Footer = () => {
       <div className='mt-5'><a href="https://twitter.com/VictorAsamu"><i class="fa-brands fa-twitter"></i></a></div>
       <div className='mt-5'><a href="https://www.facebook.com/asamu.victorjuwon"><i class="fa-brands fa-facebook"></i></a></div>
         </div>
-        <div>
+        <div className='copyright-div'>
           <center>
-            
+          Copyright © 2022 Vmart All right reserved
           </center>
         </div>
       </div>
