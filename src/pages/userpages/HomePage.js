@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes ,Navigate} from 'react-router-dom';
+import DisplayIcon from '../../components/DisplayIcon';
 import Footer from '../../components/Footer';
 import HomeNav from '../../components/HomeNav';
 import UserNavBar from '../../components/UserNavBar';
