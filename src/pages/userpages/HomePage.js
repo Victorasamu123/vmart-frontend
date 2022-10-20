@@ -4,6 +4,7 @@ import DisplayIcon from '../../components/DisplayIcon';
 import Footer from '../../components/Footer';
 import HomeNav from '../../components/HomeNav';
 import UserNavBar from '../../components/UserNavBar';
+import Account from './Account';
 import CartPage from './CartPage';
 import ComputerCatPage from './ComputerCatPage';
 import ElectCatPage from './ElectCatPage';
@@ -29,6 +30,7 @@ const HomePage = () => {
         <Route path="/cart" element={token?<CartPage/>:<Navigate to="/signin"/>}/>
         <Route path="/payment" element={token?<Payments/>:<Navigate to="/signin"/>}/>
         <Route path='/transactionpage' element={token?<TransactionPage/>:<Navigate to="/signin"/>}/>
+        <Route path="/account" element={token?<Account/>:<Navigate to="/signin"/>}/>
       </Routes>
       <Footer/>
     </>
