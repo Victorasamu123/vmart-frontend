@@ -56,7 +56,7 @@ const GameCat = () => {
       }
   return (
     <>
-       <div className='user-home-page-second-div mt-2 pb-2'>
+       <div className='user-home-page-second-div mt-2 pb-2 mb-5'>
      <div className='w-100 row'>
       <h4 className='ms-3 col-lg-12 col-md-12 col-sm-12'>Top selling comp Product</h4>
        {messgame==""?<div class="d-flex justify-content-center">

@@ -69,7 +69,7 @@ const ProductDetails = () => {
     }
   return (
     <>
-      {message==""?<div className="d-flex justify-content-center">
+      {message==""?<div className="d-flex justify-content-center" style={{height:"400px"}}>
             <div className="spinner-border text-primary" role="status">
               <span className="sr-only"></span>
             </div>

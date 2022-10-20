@@ -29,6 +29,7 @@ const HomePage = () => {
         <Route path="/payment" element={token?<Payments/>:<Navigate to="/signin"/>}/>
         <Route path='/transactionpage' element={token?<TransactionPage/>:<Navigate to="/signin"/>}/>
       </Routes>
+      <Footer/>
     </>
   )
 }

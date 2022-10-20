@@ -1,0 +1,31 @@
+.footer-general-div{
+    width: 100% !important;
+    height: 250px;
+    background-color: rgb(251,87,3);
+}
+.fa-linkedin{
+    font-size: 40px;
+    color: white !important;
+    margin-left: 100px;
+}
+.fa-square-github{
+    font-size: 40px;
+    color: white !important;
+    margin-left: 50px;
+}
+.fa-twitter{
+    font-size: 40px;
+    color: white !important;
+    margin-left: 50px;
+}
+.fa-facebook{
+    font-size: 40px;
+    color: white !important;
+    margin-left: 50px;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+}
