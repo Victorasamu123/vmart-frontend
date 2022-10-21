@@ -11,8 +11,8 @@ const ComputerCatPage = () => {
     const [messcomp,setmessphone]= useState('')
     const [messcart,setmesscart]= useState('')
     const navigate=useNavigate()
-    const getcompendpoints= "http://localhost:4000/addproducts/getcomps"
-    const addtoendpoints= "http://localhost:4000/cart/addtocart"
+    const getcompendpoints= "https://vmart-backend.vercel.app/addproducts/getcomps"
+    const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     useEffect(() => {
         getComp()
       }, [])

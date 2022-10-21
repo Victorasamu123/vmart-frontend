@@ -7,7 +7,7 @@ const Account = () => {
     const [email, setemail] = useState("")
     const [message, setmessage] = useState("")
     const [loading, setloading] = useState(false)
-    const getusersendpoints="http://localhost:4000/auth/users"
+    const getusersendpoints="https://vmart-backend.vercel.app/auth/users"
     useEffect(() => {
      getusers()
     }, [])

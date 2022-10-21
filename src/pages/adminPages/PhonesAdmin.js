@@ -8,7 +8,7 @@ const PhonesAdmin = () => {
   const [productdescription, setproductdescription] = useState("")
   const [productprice, setproductprice] = useState("")
   const [productdiscount, setproductdiscount] = useState("")
-  const endpoints="http://localhost:4000/addproducts/addphones"
+  const endpoints="https://vmart-backend.vercel.app/addproducts/addphones"
   const filechange=(e)=>{
     let myImage = e.target.files[0]
     let reader = new FileReader()

@@ -11,8 +11,8 @@ const PhoneCatPage = () => {
   const [messphone,setmessphone]= useState('')
   const [messcart,setmesscart]= useState('')
   const navigate=useNavigate()
-  const getphonesendpoints= "http://localhost:4000/addproducts/getphones"
-  const addtoendpoints= "http://localhost:4000/cart/addtocart"
+  const getphonesendpoints= "https://vmart-backend.vercel.app/addproducts/getphones"
+  const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     useEffect(() => {
       getPhones()
     }, [])

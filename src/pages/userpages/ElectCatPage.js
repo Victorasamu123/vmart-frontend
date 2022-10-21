@@ -11,8 +11,8 @@ const ElectCatPage = () => {
     const [messelect,setmessphone]= useState('')
     const [messcart,setmesscart]= useState('')
     const navigate=useNavigate()
-    const getelectendpoints= "http://localhost:4000/addproducts/getelects"
-    const addtoendpoints= "http://localhost:4000/cart/addtocart"
+    const getelectendpoints= "https://vmart-backend.vercel.app/addproducts/getelects"
+    const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     useEffect(() => {
         getElect()
       }, [])

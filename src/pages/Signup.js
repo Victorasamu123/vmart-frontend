@@ -14,7 +14,7 @@ const Signup = () => {
   const [passworderror, setpassworderror] = useState("");
   const [message, setmessage] = useState("");
   const [loading, setloading] = useState(false);
-  const endpoints = "http://localhost:4000/auth/signup"
+  const endpoints = "https://vmart-backend.vercel.app/auth/signup"
   const navigate=useNavigate()
   const signup=()=>{
     let regexForFirstName=/^[\w]{3,}$/

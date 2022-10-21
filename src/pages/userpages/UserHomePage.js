@@ -18,9 +18,9 @@ const UserHomePage = () => {
   const navigate=useNavigate()
   // const [user_id, setuser_id] = useState("");
   const location=useLocation()
-  const endpoints = "http://localhost:4000/auth/dashboard"
-  const getphonesendpoints= "http://localhost:4000/addproducts/getphones"
-  const addtoendpoints= "http://localhost:4000/cart/addtocart"
+  const endpoints = "https://vmart-backend.vercel.app/auth/dashboard"
+  const getphonesendpoints= "https://vmart-backend.vercel.app/addproducts/getphones"
+  const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
   const user_id=localStorage.userId
   useEffect(() => {
     getdashboard()

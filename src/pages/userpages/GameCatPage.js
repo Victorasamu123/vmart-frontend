@@ -11,8 +11,8 @@ const GameCatPage = () => {
     const [messgame,setmessphone]= useState('')
     const [messcart,setmesscart]= useState('')
     const navigate=useNavigate()
-    const getgameendpoints= "http://localhost:4000/addproducts/getgames"
-    const addtoendpoints= "http://localhost:4000/cart/addtocart"
+    const getgameendpoints= "https://vmart-backend.vercel.app/addproducts/getgames"
+    const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     useEffect(() => {
         getGame()
       }, [])

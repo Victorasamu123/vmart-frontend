@@ -11,7 +11,7 @@ const Payments = () => {
     const [lastname, setlastname] = useState("")
     const [amount, setamount] = useState("")
     const [message,setmessage]=useState("")
-    const transactionsendpoints ="http://localhost:4000/cart/transactions"
+    const transactionsendpoints ="https://vmart-backend.vercel.app/cart/transactions"
     useEffect(() => {
      getValue()
     }, [])

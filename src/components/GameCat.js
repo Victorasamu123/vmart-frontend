@@ -9,8 +9,8 @@ const GameCat = () => {
     const [gameArrays, setgameArrays]= useState([]);
     const [messgame,setmessphone]= useState('')
     const [messcart,setmesscart]= useState('')
-    const getgameendpoints= "http://localhost:4000/addproducts/getgames"
-    const addtoendpoints= "http://localhost:4000/cart/addtocart"
+    const getgameendpoints= "https://vmart-backend.vercel.app/addproducts/getgames"
+    const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     const navigate=useNavigate()
     useEffect(() => {
         getGame()

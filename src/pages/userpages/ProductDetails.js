@@ -14,8 +14,8 @@ const ProductDetails = () => {
     const [productdiscount, setproductdiscount]= useState("");
     const [productArray,setproductArray]=useState([])
     const [messcart,setmesscart]= useState('')
-    const productdetailendpoints= "http://localhost:4000/addproducts/productdetails"
-    const addtoendpoints= "http://localhost:4000/cart/addtocart"
+    const productdetailendpoints= "https://vmart-backend.vercel.app/addproducts/productdetails"
+    const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     useEffect(() => {
      console.log(location.state.filteredArray)
      getdetails()

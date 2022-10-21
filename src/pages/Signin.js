@@ -10,7 +10,7 @@ const Signin = () => {
   const [message, setmessage] = useState("");
   const [loading, setloading] = useState(false);
   const [user_id, setuser_id] = useState("");
-  const endpointsignin = "http://localhost:4000/auth/signin"
+  const endpointsignin = "https://vmart-backend.vercel.app/auth/signin"
   const navigate=useNavigate()
   const signin=()=>{
     let regexForEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/

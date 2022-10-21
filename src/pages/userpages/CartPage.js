@@ -9,11 +9,11 @@ const CartPage = () => {
   const [saveitems,setsaveitems]= useState("");
   const [saveitemsArray,setsaveitemsArray]= useState([]);
   const userId=localStorage.userId
-  const cartendpoints="http://localhost:4000/cart/getcart"
-  const saveitemendpoints = "http://localhost:4000/cart/saveitem"
-  const deleteitemendpoints = "http://localhost:4000/cart/removeitem"
-  const getsaveitendpoints = "http://localhost:4000/cart/getsaveitem"
-  const addtoendpoints2= "http://localhost:4000/cart/addtocart2"
+  const cartendpoints="https://vmart-backend.vercel.app/cart/getcart"
+  const saveitemendpoints = "https://vmart-backend.vercel.app/cart/saveitem"
+  const deleteitemendpoints = "https://vmart-backend.vercel.app/cart/removeitem"
+  const getsaveitendpoints = "https://vmart-backend.vercel.app/cart/getsaveitem"
+  const addtoendpoints2= "https://vmart-backend.vercel.app/cart/addtocart2"
   const navigate=useNavigate()
   useEffect(() => {
     getcart()

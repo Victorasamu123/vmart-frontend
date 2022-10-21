@@ -9,7 +9,7 @@ const TransactionPage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
   const [transactionArray,settransactionArray]=useState([])
-  const gettransactionsendpoints ="http://localhost:4000/cart/gettransactions"
+  const gettransactionsendpoints ="https://vmart-backend.vercel.app/cart/gettransactions"
   const userId = localStorage.userId
   useEffect(() => {
     gettransactions()
