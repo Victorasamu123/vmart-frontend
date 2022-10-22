@@ -35,7 +35,7 @@
         fill: white !important;
         margin-left: 450px;
         cursor: pointer;
-        margin-top: -60px;
+        margin-top: 5px;
 }
 .account{
     margin-top: -55px;
@@ -67,13 +67,13 @@
     z-index: 1;
 }
 .signup-btn-landing{
-    margin-top:-60px;
-    margin-left: 300px;
+    margin-top:10px;
+    margin-left: 200px;
     width: 15% !important;
     display: inline;
 }
 .signin-btn-landing{
-    margin-top:-110px;
+    margin-top:-70px;
     margin-left: 1100px;
     width: 15% !important;
 }
@@ -106,9 +106,9 @@
     .fa-solids{
         width: 40px;
         fill: white !important;
-        margin-left: 140px;
+        margin-left: 70px;
         cursor: pointer;
-        margin-top: -60px;
+        margin-top: 15px;
     }
     .account{
         display: none;
@@ -121,7 +121,7 @@
         margin-top: -100px;
     }
     .signup-btn-landing{
-        margin-top:-110px;
+        margin-top:-70px;
         margin-left: 210px;
         width: 25% !important;
     }
