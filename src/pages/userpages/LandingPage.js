@@ -42,14 +42,10 @@ const LandingPage = () => {
     })
   }
   const goToDetails=(index)=>{
-    let filteredArray = phoneArrays.filter((item, ind) => index == ind);
-    let itemcategory=filteredArray[0].productcategory
-    let item_id=filteredArray[0]._id
-    console.log(itemcategory,item_id)
-    navigate(`/homepage/${item_id}` , {state:{filteredArray}})
+    navigate("/signin")
   }
   const addtocart=()=>{
-    navigate("/siginin")
+    navigate("/signin")
   }
   return (
     <>

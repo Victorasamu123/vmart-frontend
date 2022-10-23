@@ -7,6 +7,7 @@ import Signin from './pages/Signin';
 import AdminDashboard from './pages/adminPages/AdminDashboard';
 import LandingPage from './pages/userpages/LandingPage';
 import HomePage from './pages/userpages/HomePage';
+import NotFoundPage from './pages/userpages/NotFoundPage';
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/admindashboard/*' element={<AdminDashboard/>}/>
         <Route path='/homepage/*' element={<HomePage/>}/>
+        <Route path='*' element={<NotFoundPage/>}/>
       </Routes>
     </>
   );
