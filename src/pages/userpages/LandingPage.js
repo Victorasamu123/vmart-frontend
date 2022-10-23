@@ -10,9 +10,15 @@ import img5 from "../../images/Tripple_banner.jpg"
 import img6 from "../../images/get_it_on_google_image.svg"
 import img7 from "../../images/download_on_app_store_image.svg"
 import img8 from "../../images/202103050842528033.jpg"
+import img9 from "../../images/378x252_copy_17.jpg"
+import img10 from "../../images/Tripple_banner.jpg"
+import img11 from "../../images/Triple-Banner-_-378x252.jpg"
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import LCompCat from '../../components/LCompCat';
+import LElectCat from '../../components/LElectCat';
+import LGameCat from '../../components/LGameCat';
+import Footer from '../../components/Footer';
 const LandingPage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
@@ -118,6 +124,27 @@ const LandingPage = () => {
     </div>
      </div>
      <LCompCat/>
+     <div className='user-home-page-third-div mt-2 pb-2'>
+        <div className='w-100 row'>
+        <h4 className='col-lg-12 col-md-12 col-sm-12 Dont-Miss-Out-On-These'>
+          <center>
+          Don't Miss Out On These!!!
+          </center>
+        </h4>
+        <div className='row w-100'>
+          <div className='col-lg-12 col-sm-12 col-md-12 ms-2'>
+            <center>
+             <img src={img9} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+             <img src={img10} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+             <img src={img11} alt="" className='col-lg-3 col-md-6 col-sm-6 dont-miss-image me-3 mb-2'/>
+            </center>
+          </div>
+        </div>
+        </div>
+      </div>
+      <LElectCat/>
+      <LGameCat/>
+      <Footer/>
     </>
   )
 }
