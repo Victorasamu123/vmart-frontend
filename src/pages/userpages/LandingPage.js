@@ -12,6 +12,7 @@ import img7 from "../../images/download_on_app_store_image.svg"
 import img8 from "../../images/202103050842528033.jpg"
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import LCompCat from '../../components/LCompCat';
 const LandingPage = () => {
   const [loading, setloading] = useState(false);
   const [message, setmessage]= useState("");
@@ -111,11 +112,12 @@ const LandingPage = () => {
               </center>
               </div>
             ))}
-            <Link to="/homepage/phonecategory">see more phone product</Link>
+            <Link to="/signin">see more phone product</Link>
           </div>
        }
     </div>
      </div>
+     <LCompCat/>
     </>
   )
 }
