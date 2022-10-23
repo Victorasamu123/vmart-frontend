@@ -17,6 +17,7 @@ function App() {
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/admindashboard/*' element={<AdminDashboard/>}/>
         <Route path='/homepage/*' element={<HomePage/>}/>
+        <Route path='/home/*'  element={<Navigate to="/homepage"/>}/>
         <Route path='*' element={<NotFoundPage/>}/>
       </Routes>
     </>
