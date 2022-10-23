@@ -47,13 +47,11 @@ const UserHomePage = () => {
     setmessage("");
     setloading(true);
     // setuser_id(location.state.user_id);
-    console.log(user_id);
     let getDashboard={user_id}
     axios.post(endpoints,getDashboard).then((result)=>{
       if(result.data.status==true){
         setloading(false);
       setmessage(result.data.message);
-      console.log(result)
       }else{
         setmessage("");
         setloading(true);
@@ -68,7 +66,6 @@ const UserHomePage = () => {
       if(result.data.status==true){
         setloading(false);
         setmessphone(result.data.message)
-        console.log(result);
         setphoneArrays(result.data.phonearray.slice(10))
       }else{
         setmessage("")
@@ -81,12 +78,10 @@ const UserHomePage = () => {
     let filteredArray = phoneArrays.filter((item, ind) => index == ind);
     let itemcategory=filteredArray[0].productcategory
     let item_id=filteredArray[0]._id
-    console.log(itemcategory,item_id)
     navigate(`/homepage/${item_id}` , {state:{filteredArray}})
   }
   const addtocart=(index)=>{
     let filteredArray = phoneArrays.filter((item, ind) => index == ind);
-    console.log(filteredArray)
     let productimage=filteredArray[0].productimage
     let productname=filteredArray[0].productname
     let productcategory=filteredArray[0].productcategory
@@ -96,8 +91,13 @@ const UserHomePage = () => {
     let userId=localStorage.userId
     let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount,userId}
     axios.post(addtoendpoints,cartObj).then((result)=>{
-      console.log(result.data.message);
+      if(result.data.status){
+        alert(result.data.message)
+      }else{
+        alert(result.data.message)
+      }
       setmesscart(result.data.message);
+      // navigate("/homepage/cart")
     })
   }
   return (
@@ -177,9 +177,11 @@ const UserHomePage = () => {
         </div>
         </div>
       </div>
+      
       <ElectCat/>
       <GameCat/>
      </div>
+     
     }
     </>
   )

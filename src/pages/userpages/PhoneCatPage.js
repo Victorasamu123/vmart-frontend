@@ -23,7 +23,6 @@ const PhoneCatPage = () => {
           if(result.data.status==true){
             setloading(false);
             setmessphone(result.data.message)
-            console.log(result);
             setphoneArrays(result.data.phonearray)
           }else{
             setmessage("")
@@ -36,12 +35,10 @@ const PhoneCatPage = () => {
         let filteredArray = phoneArrays.filter((item, ind) => index == ind);
         let itemcategory=filteredArray[0].productcategory
         let item_id=filteredArray[0]._id
-        console.log(itemcategory,item_id)
         navigate(`/homepage/${item_id}` , {state:{filteredArray}})
       }
       const addtocart=(index)=>{
         let filteredArray = phoneArrays.filter((item, ind) => index == ind);
-        console.log(filteredArray)
         let productimage=filteredArray[0].productimage
         let productname=filteredArray[0].productname
         let productcategory=filteredArray[0].productcategory
@@ -51,7 +48,11 @@ const PhoneCatPage = () => {
         let userId=localStorage.userId
         let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount,userId}
         axios.post(addtoendpoints,cartObj).then((result)=>{
-          console.log(result.data.message);
+          if(result.data.status){
+            alert(result.data.message)
+          }else{
+            alert(result.data.message)
+          }
           setmesscart(result.data.message);
         })
       }

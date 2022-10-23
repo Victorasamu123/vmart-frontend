@@ -39,7 +39,6 @@ const LandingPage = () => {
       if(result.data.status==true){
         setloading(false);
         setmessphone(result.data.message)
-        console.log(result);
         setphoneArrays(result.data.phonearray.slice(10))
       }else{
         setmessage("")

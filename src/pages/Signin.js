@@ -39,10 +39,8 @@ const Signin = () => {
       setloading(true);
       let signIpObj={email,password}
       axios.post(endpointsignin,signIpObj).then((result)=>{
-        console.log(result)
         setloading(false);
         setmessage(result.data.message);
-        console.log(result.data.userId)
         setuser_id(result.data.userId)
         console.log(message);
         localStorage.token = result.data.token

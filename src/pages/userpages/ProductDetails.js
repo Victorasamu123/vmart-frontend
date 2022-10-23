@@ -17,7 +17,6 @@ const ProductDetails = () => {
     const productdetailendpoints= "https://vmart-backend.vercel.app/addproducts/productdetails"
     const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
     useEffect(() => {
-     console.log(location.state.filteredArray)
      getdetails()
     }, [])
     
@@ -27,11 +26,9 @@ const ProductDetails = () => {
       setproductArray(location.state.filteredArray)
       const item_id=location.state.filteredArray[0]._id;
       const itemcategory=location.state.filteredArray[0].productcategory;
-      console.log(itemcategory,item_id)
       let Productdetails={item_id,itemcategory};
       axios.post(productdetailendpoints,Productdetails).then((result)=>{
         if(result.data.status==true){
-          console.log(result)
           setloading(false);
           setmessage(result.data.message);
           setproductimage(result.data.product.productimage)
@@ -63,7 +60,11 @@ const ProductDetails = () => {
       let userId=localStorage.userId
       let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount,userId}
       axios.post(addtoendpoints,cartObj).then((result)=>{
-        console.log(result.data.message);
+        if(result.data.status){
+          alert(result.data.message)
+        }else{
+          alert(result.data.message)
+        }
         setmesscart(result.data.message);
       })
     }

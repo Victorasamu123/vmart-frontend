@@ -16,14 +16,12 @@ const Payments = () => {
      getValue()
     }, [])
     const getValue=()=>{
-        console.log(location.state)
     }
     const makepayment=(e)=>{
         let email=localStorage.email
         let userId = localStorage.userId
         e.preventDefault()
         let productname2=location.state.filteredArray[0].productname
-        console.log(productname2)
         const paystack = new PaystackPop()
         paystack.newTransaction({
             key:"pk_test_8450d0b1f1e6e0c8b67fb020e21d4802a6d8c4dd",
@@ -37,7 +35,6 @@ const Payments = () => {
                 let ref=transaction.reference
                 let date = new Date()
                 let transactionObj={firstname,lastname,amount,email,userId,productname2,ref,date}
-                console.log(transactionObj);
                 setmessage("")
                 axios.post(transactionsendpoints,transactionObj).then((result)=>{
                     setmessage(result.data.message)

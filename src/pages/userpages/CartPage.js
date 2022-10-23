@@ -25,7 +25,6 @@ const CartPage = () => {
     let getcartpageobj={userId}
     axios.post(cartendpoints,getcartpageobj).then((result)=>{
       if(result.data.status==true){
-        console.log(result)
         setloading(false);
         setmessage(result.data.message);
         setcartArray(result.data.cartresult.reverse())
@@ -52,7 +51,6 @@ const CartPage = () => {
   }
   const saveitem=(index)=>{
     let filteredArray = cartArray.filter((item, ind) => index == ind);
-    console.log(filteredArray)
     let productimage=filteredArray[0].productimage
     let productname=filteredArray[0].productname
     let productcategory=filteredArray[0].productcategory
@@ -70,7 +68,6 @@ const CartPage = () => {
   }
   const removeitem=(index)=>{
     let filteredArray = cartArray.filter((item, ind) => index == ind);
-    console.log(filteredArray)
     let productimage=filteredArray[0].productimage
     let productname=filteredArray[0].productname
     let productcategory=filteredArray[0].productcategory
@@ -88,7 +85,6 @@ const CartPage = () => {
   }
   const addtocart2=(index)=>{
     let filteredArray = saveitemsArray.filter((item, ind) => index == ind);
-    console.log(filteredArray)
     let productimage=filteredArray[0].productimage
     let productname=filteredArray[0].productname
     let productcategory=filteredArray[0].productcategory
@@ -98,7 +94,6 @@ const CartPage = () => {
     let userId=localStorage.userId
     let cartObj={productimage,productname,productcategory,productdescription,productprice,productdiscount,userId}
     axios.post(addtoendpoints2,cartObj).then((result)=>{
-      console.log(result.data.message);
       getcart()
       getsaveitem()
     })

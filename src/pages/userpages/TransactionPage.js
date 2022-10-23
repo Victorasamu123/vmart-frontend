@@ -21,7 +21,6 @@ const TransactionPage = () => {
     let userId=localStorage.userId
     let transObj={userId}
     axios.post(gettransactionsendpoints,transObj).then((result)=>{
-      console.log(result)
       if(result.data.status==true){
         setloading(false);
         setmessage(result.data.message);

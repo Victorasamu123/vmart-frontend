@@ -21,7 +21,6 @@ const Account = () => {
             if(result.data.status==true){
               setloading(false);
               setmessage(result.data.message);
-              console.log(result)
               setfirstname(result.data.result.firstname)
               setlastname(result.data.result.lastname)
               setemail(result.data.result.email)
