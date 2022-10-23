@@ -21,12 +21,28 @@ const UserHomePage = () => {
   const endpoints = "https://vmart-backend.vercel.app/auth/dashboard"
   const getphonesendpoints= "https://vmart-backend.vercel.app/addproducts/getphones"
   const addtoendpoints= "https://vmart-backend.vercel.app/cart/addtocart"
+  const endpoints2 = "https://vmart-backend.vercel.app/auth/verifytoken"
   const user_id=localStorage.userId
+  let token = localStorage.token
   useEffect(() => {
+    verify()
     getdashboard()
     getPhones()
   }, [])
-
+  const verify=()=>{
+    axios.get(endpoints2,{
+      headers:{
+          "Authorization" : `Bearer ${token}`,
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+      }
+  }).then((res)=>{
+      if(!res.data.status){
+          localStorage.removeItem("token")
+          navigate("/signin")
+      }
+  })
+  }
   const getdashboard=()=>{
     setmessage("");
     setloading(true);

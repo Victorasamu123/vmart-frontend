@@ -12,7 +12,7 @@ const HomeNav = ({homecol}) => {
    }
   return (
     <>
-      <div className='general-div-home-nav'>
+      <div className='general-div-home-nav sticky-top'>
         <span onClick={tryMe} className="side-nav-btn" style={{cursor:"pointer"}}><img src={icon6} alt=""/></span>
         <div id='sideNavBar'>
           <div onClick={close} className="side-nav-btn-close" style={{cursor:"pointer"}}>&times;</div>

@@ -33,6 +33,32 @@
     font-size: 200%;
     color: red;
 }
+.icon-general-div{
+    height: 100px;
+    width: 100px;
+    /* background-color: black; */
+    position: fixed;
+    top: 500px;
+    left: 1250px;
+    display: block;
+}
+.home-icon{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(251,87,3);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.cart-icon{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(251,87,3);
+    cursor: pointer;
+}
 @media only screen and (max-width: 1000px) {
     .account-general-div{
         width: 100% !important;
@@ -56,5 +82,26 @@
     .second{
         font-size: 200%;
         color: red;
+    }
+    .icon-general-div{
+       
+        display: none;
+    }
+    .home-icon{
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: rgb(251,87,3);
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .cart-icon{
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: rgb(251,87,3);
+        cursor: pointer;
     }
 }

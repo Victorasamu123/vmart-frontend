@@ -15,7 +15,7 @@ const UserNavBar2 = () => {
    }
   return (
     <>
-      <div className='general-navbar2-div'>
+      <div className='general-navbar2-div sticky-top'>
       <img src={icon6}  className="fa-soli mt-4" alt=""  onClick={tryMe}/>
       <div id='sideNavBar'>
           <div onClick={close} className="side-nav-btn-close" style={{cursor:"pointer"}}>&times;</div>
